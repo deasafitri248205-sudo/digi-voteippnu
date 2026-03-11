@@ -23,27 +23,24 @@ height:100vh;
 }
 
 .bg-box{
-width:1440px;
-height:1024px;
-
+width:980px;
+height:680px;
 background-image:
 linear-gradient(rgba(207,232,213,0.9),rgba(207,232,213,0.9)),
-url(c:\Users\RPL\Downloads\WhatsApp Image 2026-03-11 at 08.44.26.jpeg);
-
+url("c:\Users\RPL\Downloads\WhatsApp Image 2026-03-11 at 08.44.26.jpeg")
 background-size:cover;
 background-position:center;
-
 display:flex;
 justify-content:center;
 align-items:center;
-
 border-radius:10px;
 }
 
 .card{
 background:white;
-width:645px;
-padding:35px;
+width:400px;
+height: 470px;
+padding:30px;
 border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 text-align:center;
