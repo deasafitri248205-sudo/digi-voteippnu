@@ -6,81 +6,98 @@
 <title>Digi Vote IPPNU</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
 
-    background-image: 
-        linear-gradient(rgba(207,232,213,0.9), rgba(207,232,213,0.9)),
-        url("batik.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+*{
+box-sizing:border-box;
 }
 
-.card {
-    background: white;
-    width: 350px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
 }
 
-.logo {
-    width: 90px;
-    margin-bottom: 10px;
+.bg-box{
+width:900px;
+height:450px;
+
+background-image:
+linear-gradient(rgba(207,232,213,0.9),rgba(207,232,213,0.9)),
+url("c:\Users\RPL\Downloads\WhatsApp Image 2026-03-11 at 08.44.26.jpeg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:10px;
 }
 
-h2 {
-    color: #2f6d3a;
-    margin: 5px 0;
+.card{
+background:white;
+width:360px;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+text-align:center;
 }
 
-p {
-    font-size: 14px;
-    margin-bottom: 25px;
+.logo{
+width:90px;
+margin-bottom:10px;
 }
 
-.input-box {
-    position: relative;
-    margin-bottom: 15px;
+h2{
+color:#2f6d3a;
+margin:5px 0;
 }
 
-.input-box input {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 8px;
-    background: #d7e7d7;
-    font-size: 14px;
+p{
+font-size:14px;
+margin-bottom:25px;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #2f6d3a;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.input-box{
+margin-bottom:15px;
 }
 
-button:hover {
-    background: #245a2f;
+.input-box input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#d7e7d7;
+font-size:14px;
 }
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#2f6d3a;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#245a2f;
+}
+
 </style>
-
 </head>
 
 <body>
+
+<div class="bg-box">
 
 <div class="card">
 
@@ -100,6 +117,8 @@ button:hover {
 </div>
 
 <button>MASUK</button>
+
+</div>
 
 </div>
 
