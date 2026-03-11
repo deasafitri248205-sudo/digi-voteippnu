@@ -7,8 +7,14 @@
         * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
         body, html {
-            margin: 0; padding: 0; height: 100%;
-            background-color: #f0f0f0; display: flex;
+            margin: 0;
+            padding: 0; 
+            height: 100%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh
         }
 
         /* Container Utama dengan Warna Hijau Background */
