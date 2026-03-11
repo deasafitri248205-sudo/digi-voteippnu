@@ -17,19 +17,19 @@
             height:100vh
         }
 
-        /* Container Utama dengan Warna Hijau Background */
+        
         .main-container {
             width: 1000px; height: 600px;
-            background-color: #BEE9CC; /* Warna hijau background */
+            background-color: #BEE9CC; 
             margin: auto; display: flex;
             position: relative; overflow: hidden;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
 
-        /* Sidebar Kiri */
+
         .sidebar {
             width: 150px;
-            background-color: #5d8b76; /* Warna hijau gelap sidebar */
+            background-color: #5d8b76; 
             color: white;
             display: flex;
             flex-direction: column;
@@ -44,7 +44,7 @@
 
         .sidebar-item.logout { margin-top: auto; border: none; }
 
-        /* Konten Area */
+        
         .content {
             flex-grow: 1;
             display: flex;
@@ -61,7 +61,7 @@
             margin-bottom: 30px;
         }
 
-        /* Ikon Segitiga di Pojok Kanan Atas */
+        
         .logo-corner {
             position: absolute;
             top: 20px; right: 20px;
@@ -75,7 +75,7 @@
             content: 'A'; color: #f1c40f; font-size: 12px; font-weight: bold;
         }
 
-        /* POPUP MODAL (Pusat Perhatian) */
+        
         .modal-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -100,7 +100,7 @@
             margin-bottom: 30px;
         }
 
-        /* Tombol */
+        
         .button-wrapper {
             display: flex;
             justify-content: center;
@@ -125,7 +125,7 @@
 
         .btn:hover { background: #eeeeee; }
 
-        /* Ikon dalam tombol */
+        
         .icon-box {
             width: 24px; height: 24px;
             border-radius: 50%;
@@ -141,7 +141,7 @@
 <body>
 
 <div class="main-container">
-    <!-- Sidebar -->
+    
     <div class="sidebar">
         <div class="sidebar-item">Sistem E-voting</div>
         <div class="sidebar-item" style="background: rgba(0,0,0,0.1)">Voting</div>
@@ -149,12 +149,12 @@
         <div class="sidebar-item logout">Log Out -></div>
     </div>
 
-    <!-- Konten Utama -->
+    
     <div class="content">
         <div class="logo.png"></div>
         <div class="kandidat-title">KANDIDAT 1</div>
 
-        <!-- Pop-up Konfirmasi -->
+        
         <div class="modal-overlay">
             <div class="modal-card">
                 <p>Yakin dengan pilihan anda?<br>Setelah klik "Simpan", pilihan<br>anda tidak dapat diubah.</p>
