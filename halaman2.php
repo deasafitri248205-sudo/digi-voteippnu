@@ -7,7 +7,7 @@
     <style>
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Serif', 'Palatino Linotype', 'Book Antiqua', serif; 
     background: #cfe3d3;
     height:100vh;
     display:flex;
@@ -23,16 +23,15 @@ body{
 
 .card{
     background:white;
-    width:400px;
-    padding:40px;
+    width:700px;
+    padding:100px;
     border-radius:15px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
-
 .avatar{
-    width:120px;
-    margin-bottom:15px;
+    width:200px;
+    margin-bottom:20px;
 }
 
 h2{
@@ -75,10 +74,10 @@ button:hover{
 
     <div class="card">
 
-        <img src="c:\Users\PPLG\OneDrive\Pictures\ICON.jpg" class="avatar">
+        <img src="ICON-removebg-preview.png" class="avatar">
 
-        <h2>LOGIN GAGAL !</h2>
-        <p>Nomor anggota dan Kode salah</p>
+        <h2>LOGIN GAGAL !<b></h2>
+        <p>Nomor anggota dan Kode salah<b></p>
 
         <button onclick="reloadPage()">COBA LAGI</button>
 
