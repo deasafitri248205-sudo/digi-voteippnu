@@ -44,7 +44,7 @@ body{
     height:600px;
     background-image:
     linear-gradient(rgba(207,232,213,0.9),rgba(207,232,213,0.9)),
-    url("batik.png");
+    url("background1.png");
     background-size:cover;
     background-position:center;
     display:flex;
