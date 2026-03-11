@@ -40,8 +40,8 @@ body{
 }
 
 .badan{
-    width:900px;
-    height:600px;
+    width:1950px;
+    height:1000px;
     background-image:
     linear-gradient(rgba(207,232,213,0.9),rgba(207,232,213,0.9)),
     url("background1.png");
@@ -55,16 +55,17 @@ body{
 
 .kotaktabel{
     background:white;
-    width:360px;
+    width:1000px;
+    height:700px;
     padding:35px;
-    border-radius:15px;
+    border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
     text-align:center;
 }
 
 .logo{
-    width:90px;
-    margin-bottom:10px;
+    width:180px;
+    margin-bottom:15px;
 }
 
 .input-box{
