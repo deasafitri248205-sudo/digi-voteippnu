@@ -1,3 +1,21 @@
+<?php
+$nomorBenar = "123456";
+$kodeBenar = "ippnu";
+$error = false;
+
+if(isset($_POST['nomor'])){
+    $nomor = $_POST['nomor'];
+    $kode = $_POST['kode'];
+
+    if($nomor == $nomorBenar && $kode == $kodeBenar){
+        header("Location: voting.html");
+        exit;
+    }else{
+        $error = true;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -91,53 +109,38 @@ button:hover{
 <body>
 
 <div class="badan">
-
-<!-- LOGIN -->
-<div class="kotaktabel" id="loginBox">
+<?php if(!$error){ ?>
+<div class="kotaktabel">
     <img src="logo.png" class="logo">
     <h3>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h3>
     <p>Silahkan masuk untuk memberikan hak suara</p>
-    
-    <div class="input-box">
-        <input type="text" id="nomor" placeholder="Masukkan Nomor Anggota">
-    </div>
-    
-    <div class="input-box">
-        <input type="password" id="kode" placeholder="Masukkan Kode">
-    </div>
-    
-    <button onclick="login()">MASUK</button>
 
+<form method="post">
+<div class="input-box">
+    <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota">
 </div>
 
-<!-- LOGIN GAGAL -->
-<div class="card error" id="errorBox">
-    <img src="error.png">
+<div class="input-box">
+    <input type="password" name="kode" placeholder="Masukkan Kode">
+</div>
+
+<button type="submit">MASUK</button>
+</form>
+</div>
+
+<?php } else { ?>
+<div class="kotaktabel error">
+    <img src="ICON-removebg-preview.png">
     <h3 style="color:#2f6d3a;">LOGIN GAGAL!</h3>
-    <p>Nomor anggota dan Kode salah</p>
-    <button onclick="cobaLagi()">COBA LAGI</button>
+    <p>Nomor anggota atau kode salah</p>
+
+    <a href="index.php">
+        <button>COBA LAGI</button>
+    </a>
 </div>
-
-</div>
-
-<script>
-function login(){
-    let nomor=document.getElementById("nomor").value
-    let kode=document.getElementById("kode").value
-
-if(nomor=="123456" && kode=="ippnu"){
-    alert("Login Berhasil")
-}else{
-    document.getElementById("loginBox").style.display="none"
-    document.getElementById("errorBox").style.display="block"
-}
-}
-
-function cobaLagi(){
-    document.getElementById("loginBox").style.display="block"
-    document.getElementById("errorBox").style.display="none"
-}
-</script>
+<?php } ?>
 
 </body>
 </html>
+
+<?php
