@@ -1,147 +1,130 @@
-<?php
-$nomorBenar = "123456";
-$kodeBenar = "ippnu";
-$error = false;
-
-if(isset($_POST['nomor'])){
-    $nomor = $_POST['nomor'];
-    $kode = $_POST['kode'];
-
-    if($nomor == $nomorBenar && $kode == $kodeBenar){
-        header("Location: voting.html");
-        exit;
-    }else{
-        $error = true;
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digi Vote IPPNU</title>
+<link rel="stylesheet" href="style.css">
 
+<!-- icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-
-*{
-    box-sizing:border-box;
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    margin:0;
-    font-family:Arial;
-    background:#f5f5f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+height:100vh;
+background-image:url("background1.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.badan{
-    width:1950px;
-    height:1000px;
-    background-image:
-    linear-gradient(rgba(207,232,213,0.9),rgba(207,232,213,0.9)),
-    url("background1.png");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:10px;
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.kotaktabel{
-    background:white;
-    width:1000px;
-    height:700px;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    text-align:center;
+.login-card{
+background:#f5f5f5;
+padding:40px;
+width:350px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 .logo{
-    width:180px;
-    margin-bottom:15px;
+width:80px;
+margin-bottom:10px;
+}
+
+.login-card h2{
+color:#2f6f3e;
+font-size:20px;
+margin-bottom:8px;
+}
+
+.login-card p{
+font-size:13px;
+margin-bottom:20px;
 }
 
 .input-box{
-    margin-bottom:15px;
+display:flex;
+align-items:center;
+background:#9bbf9c;
+padding:10px;
+border-radius:8px;
+margin-bottom:15px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#d7e7d7;
+.input-box i{
+margin-right:10px;
+color:#1e3d27;
 }
 
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#2f6d3a;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+.input-box input{
+border:none;
+outline:none;
+background:transparent;
+width:100%;
+color:#fff;
 }
 
-button:hover{
-    background:#245a2f;
+.btn{
+width:100%;
+padding:12px;
+border:none;
+background:#3d6e2f;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
 }
 
-.error{
-    display:none;
+.btn:hover{
+background:#2c5223;
 }
-
-.error img{
-    width:120px;
-    margin-bottom:10px;
-}
-
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="badan">
-<?php if(!$error){ ?>
-<div class="kotaktabel">
-    <img src="logo.png" class="logo">
-    <h3>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h3>
-    <p>Silahkan masuk untuk memberikan hak suara</p>
+<div class="container">
 
-<form method="post">
-<div class="input-box">
-    <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota">
+    <div class="login-card">
+
+        <img src="logo.png" class="logo">
+
+        <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
+
+        <p>Silahkan masuk untuk memberikan hak suara</p>
+
+        <div class="input-box">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Masukkan Nomor Anggota">
+        </div>
+
+        <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Masukkan Kode">
+            <i class="fa fa-eye-slash"></i>
+        </div>
+
+        <button class="btn">MASUK</button>
+
+    </div>
+
 </div>
-
-<div class="input-box">
-    <input type="password" name="kode" placeholder="Masukkan Kode">
-</div>
-
-<button type="submit">MASUK</button>
-</form>
-</div>
-
-<?php } else { ?>
-<div class="kotaktabel error">
-    <img src="ICON-removebg-preview.png">
-    <h3 style="color:#2f6d3a;">LOGIN GAGAL!</h3>
-    <p>Nomor anggota atau kode salah</p>
-
-    <a href="index.php">
-        <button>COBA LAGI</button>
-    </a>
-</div>
-<?php } ?>
 
 </body>
 </html>
-
-<?php

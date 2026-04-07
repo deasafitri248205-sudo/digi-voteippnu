@@ -1,94 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Gagal</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: 'Serif', 'Palatino Linotype', 'Book Antiqua', serif; 
-    background: #cfe3d3;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+height:100vh;
+background-image:url("background.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.logo{
+position:absolute;
+top:20px;
+left:20px;
+width:60px;
 }
 
 .container{
-    width:100%;
-    display:flex;
-    justify-content:center;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
 }
 
 .card{
-    background:white;
-    width:700px;
-    padding:100px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-.avatar{
-    width:200px;
-    margin-bottom:20px;
+background:#f2f2f2;
+width:420px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-h2{
-    color:#2f6b1e;
-    margin:10px 0;
+.illustration{
+width:150px;
+margin-bottom:15px;
 }
 
-p{
-    color:#2f6b1e;
-    font-size:18px;
+.card h2{
+color:#2e6b2e;
+margin-bottom:5px;
 }
 
-button{
-    margin-top:20px;
-    padding:12px 30px;
-    border:none;
-    border-radius:8px;
-    background:#3a7d1c;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
+.card p{
+color:#2e6b2e;
+margin-bottom:25px;
+font-size:18px;
 }
 
-button:hover{
-    background:#2c5f15;
+.btn{
+background:#2f6f1f;
+color:white;
+border:none;
+padding:12px 30px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+display:inline-flex;
+align-items:center;
+gap:10px;
 }
-    </style>
-</body>
-</html>
-    <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Gagal</title>
-    <link rel="stylesheet" href="style.css">
+
+.circle{
+width:15px;
+height:15px;
+border:2px solid white;
+border-radius:50%;
+display:inline-block;
+}
+</style>
 </head>
+
 <body>
+
+<img src="logo.png" class="logo">
 
 <div class="container">
 
     <div class="card">
 
-        <img src="ICON-removebg-preview.png" class="avatar">
+        <img src="icon.png" class="illustration">
 
-        <h2>LOGIN GAGAL !<b></h2>
-        <p>Nomor anggota dan Kode salah<b></p>
+        <h2>LOGIN GAGAL!</h2>
 
-        <button onclick="reloadPage()">COBA LAGI</button>
+        <p>Nomor anggota dan Kode salah</p>
+
+        <button class="btn">
+            COBA LAGI
+            <span class="circle"></span>
+        </button>
 
     </div>
 
 </div>
 
-<script src="script.js"></script>
-
 </body>
 </html>
-</head>
-<body>
-    
