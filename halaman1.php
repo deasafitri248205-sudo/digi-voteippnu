@@ -18,7 +18,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 height:100vh;
-background-image:url("background1.jpeg");
+background-image:url("background.jpeg");
 background-size:cover;
 background-position:center;
 display:flex;

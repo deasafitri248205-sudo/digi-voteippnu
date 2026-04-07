@@ -93,7 +93,7 @@ display:inline-block;
 
     <div class="card">
 
-        <img src="icon.png" class="illustration">
+        <img src="orang.png" class="illustration">
 
         <h2>LOGIN GAGAL!</h2>
 
