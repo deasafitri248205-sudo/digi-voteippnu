@@ -1,3 +1,25 @@
+<?php
+$nomorBenar = "123456";
+$kodeBenar = "ippnu";
+
+if(isset($_POST['nomor'])){
+    $nomor = $_POST['nomor'];
+    $kode = $_POST['kode'];
+
+    if($nomor == $nomorBenar && $kode == $kodeBenar){
+        header("Location: halaman3.php");
+        exit;
+    }else{
+        if($nomor != $nomorBenar){
+            header("Location: halaman2.php?error=nomor");
+        }else{
+            header("Location: halaman2.php?error=kode");
+        }
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -18,7 +40,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 height:100vh;
-background-image:url("background.jpeg");
+background-image:url("background.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -99,6 +121,7 @@ background:#2c5223;
 </head>
 <body>
 
+<form method="POST">
 <div class="container">
 
     <div class="login-card">
@@ -109,19 +132,20 @@ background:#2c5223;
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
 
-        <div class="input-box">
-            <i class="fa fa-user"></i>
-            <input type="text" placeholder="Masukkan Nomor Anggota">
-        </div>
+    <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota" required>
+    </div>
 
-        <div class="input-box">
-            <i class="fa fa-lock"></i>
-            <input type="password" placeholder="Masukkan Kode">
-            <i class="fa fa-eye-slash"></i>
-        </div>
+    <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" name="kode" placeholder="Masukkan Kode" required>
+        <i class="fa fa-eye-slash"></i>
+    </div>
 
-        <button class="btn">MASUK</button>
+    <button type="submit" class="btn">MASUK</button>
 
+</form>
     </div>
 
 </div>

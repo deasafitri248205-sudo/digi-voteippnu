@@ -1,3 +1,15 @@
+<?php
+$pesan = "Nomor anggota dan Kode salah";
+
+if(isset($_GET['error'])){
+    if($_GET['error'] == "nomor"){
+        $pesan = "Nomor anggota salah!";
+    }elseif($_GET['error'] == "kode"){
+        $pesan = "Kode salah!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,8 +26,8 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-height:100vh;
-background-image:url("background.jpeg");
+height:85vh;
+background-image:url("background.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -93,16 +105,18 @@ display:inline-block;
 
     <div class="card">
 
-        <img src="orang.png" class="illustration">
+        <img src="orang.jpg" class="illustration">
 
         <h2>LOGIN GAGAL!</h2>
 
-        <p>Nomor anggota dan Kode salah</p>
+        <p><?php echo $pesan; ?></p>
 
+    <a href="halaman1.php">
         <button class="btn">
             COBA LAGI
             <span class="circle"></span>
         </button>
+    </a>
 
     </div>
 

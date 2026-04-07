@@ -6,7 +6,8 @@
 <title>Detail Kandidat</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  *{
+    
+.{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -14,7 +15,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpg");
+background-image:url("background.jpeg");
 background-size:cover;
 background-position:center;
 height:100vh;
@@ -116,7 +117,7 @@ display:block;
 }
 
 .name-banner{
-background-image:url("button.jpg");
+background-image:url("button.png");
 background-size:100% 100%;
 background-repeat:no-repeat;
 
@@ -181,6 +182,59 @@ cursor:pointer;
 
 .vote:hover, .back:hover{
 background:#1b5e20;
+}
+
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.25);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.popup{
+background:#eee;
+padding:50px 60px;
+border-radius:20px;
+width:600px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.popup-text{
+font-size:28px;
+line-height:1.4;
+margin-bottom:40px;
+}
+
+.popup-buttons{
+display:flex;
+justify-content:center;
+gap:60px;
+}
+
+.btn-save,
+.btn-cancel{
+background:#d9d9d9;
+border:none;
+padding:15px 40px;
+border-radius:12px;
+font-size:22px;
+cursor:pointer;
+}
+
+
+.btn-save{
+color:green;
+}
+
+.btn-cancel{
+color:red;
 }
 </style>
 </head>
@@ -249,6 +303,30 @@ background:#1b5e20;
   </div>
 
 </div>
+<div class="overlay">
 
+  <div class="popup">
+
+    <p class="popup-text">
+      Yakin dengan pilihan anda?<br>
+      Setelah klik “Simpan”, pilihan<br>
+      anda tidak dapat diubah.
+    </p>
+
+    <div class="popup-buttons">
+
+      <button class="btn-save">
+        ✓ Simpan
+      </button>
+
+      <button class="btn-cancel">
+        ✗ Batal
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>
