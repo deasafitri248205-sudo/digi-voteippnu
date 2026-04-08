@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detail Kandidat</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
 *{
@@ -34,37 +33,34 @@ color:white;
 display:flex;
 flex-direction:column;
 align-items:center;
-justify-content:space-between; /* logout ke bawah */
 }
 
 .sidebar h2{
 text-align:center;
-}
-
-.menu{
-flex:1;
-display:flex;
-align-items:center; /* menu ke tengah */
+margin-bottom:60px;
 }
 
 .sidebar ul{
 list-style:none;
 text-align:center;
-padding:0;
 }
 
 .sidebar li{
-margin:25px 0;
+margin:30px 0;
 font-size:20px;
 }
 
 .sidebar a{
-text-decoration:none;
 color:white;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
 }
 
 .logout{
-margin-bottom:20px;
+margin-top:auto;
 font-size:18px;
 }
 
@@ -102,19 +98,18 @@ justify-content:center;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
+.photo-card img{
+width:200px;
+}
+
 .candidate{
 display:flex;
 flex-direction:column;
 align-items:center;
 }
 
-.candidate-img{
-width:220px;
-display:block;
-}
-
 .name-banner{
-background-image:url("button.jpg");
+background-image:url("button.png");
 background-size:100% 100%;
 background-repeat:no-repeat;
 width:320px;
@@ -150,17 +145,9 @@ border-radius:15px;
 box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* PERBAIKAN TEKS */
 .box p{
-display:flex;
-align-items:flex-start;
-gap:10px;
-font-size:16px;
 margin:10px 0;
-}
-
-.box span:first-child{
-min-width:20px;
+font-size:16px;
 }
 
 .buttons{
@@ -170,9 +157,10 @@ gap:20px;
 }
 
 .vote, .back{
+display:inline-block;
+text-decoration:none;
 background:#2e7d32;
 color:white;
-border:none;
 padding:10px 25px;
 border-radius:10px;
 font-size:16px;
@@ -190,35 +178,31 @@ background:#1b5e20;
 <div class="container">
 
   <div class="sidebar">
-    <h2>Sistem<br>E-Voting</h2>
+    <h2>Sistem<br>DIGI-VOTE</h2>
 
-    <div class="menu">
-      <ul>
-        <li>Voting</a></li>
-        <li><a href="halaman11.php">Hasil Voting</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="voting.html">Voting</a></li>
+      <li><a href="hasil.html">Hasil Voting</a></li>
+    </ul>
 
-    <div class="logout">
-      <a href="halaman1.php">Log Out →</a>
-    </div>
+    <div class="logout">Log Out →</div>
   </div>
 
   <div class="main">
 
     <img src="logo.png" class="logo">
 
-    <h1>KANDIDAT 1</h1>
+    <h1>KANDIDAT 2</h1>
 
     <div class="content">
 
       <div class="candidate">
         <div class="photo-card">
-          <img src="kandidat1.png" class="candidate-img">
+          <img src="kandidat2.png">
         </div>
 
         <div class="name-banner">
-          PUTRI AYU
+          DWI RATNA
         </div>
       </div>
 
@@ -228,7 +212,7 @@ background:#1b5e20;
           <img src="visi.png" class="title-img">
 
           <div class="box">
-            <p><span>✔</span><span>Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</span></p>
+            <p>✔ Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik. Mewujudkan IPNU sebagai wadah pelajar NU yang solid, kreatif, dan berlandaskan nilai Ahlussunnah Wal Jama’ah.</p>
           </div>
         </div>
 
@@ -236,15 +220,15 @@ background:#1b5e20;
           <img src="misi.png" class="title-img">
 
           <div class="box">
-            <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</span></p>
-            <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</span></p>
-            <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar</span></p>
+            <p>✔ Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>
+            <p>✔ Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>
+            <p>✔ Mengadakan kegiatan yang mendukung prestasi pelajar</p>
           </div>
         </div>
 
         <div class="buttons">
-          <button class="vote" onclick="window.location.href='halaman5.php'">VOTING</button>
-          <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
+          <a href="halaman7.php" class="vote">VOTING</a>
+          <a href="halaman3.php" class="back">KEMBALI</a>
         </div>
 
       </div>

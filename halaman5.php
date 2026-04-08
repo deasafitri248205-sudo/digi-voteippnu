@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detail Kandidat</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-*{
+  *{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -26,6 +25,7 @@ display:flex;
 height:100vh;
 }
 
+
 .sidebar{
 width:220px;
 background:rgba(150,190,160,0.8);
@@ -34,39 +34,34 @@ color:white;
 display:flex;
 flex-direction:column;
 align-items:center;
-justify-content:space-between; /* logout ke bawah */
+height:100vh;
 }
 
 .sidebar h2{
 text-align:center;
-}
-
-.menu{
-flex:1;
-display:flex;
-align-items:center; /* menu ke tengah */
+margin-bottom:60px;
 }
 
 .sidebar ul{
 list-style:none;
-text-align:center;
-padding:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+flex:1;
 }
 
 .sidebar li{
-margin:25px 0;
+margin:30px 0;
 font-size:20px;
-}
-
-.sidebar a{
-text-decoration:none;
-color:white;
+cursor:pointer;
 }
 
 .logout{
-margin-bottom:20px;
+margin-top:auto;
 font-size:18px;
 }
+
 
 .main{
 flex:1;
@@ -86,10 +81,29 @@ text-align:center;
 margin-bottom:40px;
 }
 
+
 .content{
 display:flex;
 justify-content:center;
 gap:60px;
+}
+
+
+.photo-card{
+background:#eee;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.photo-card img{
+width:200px;
+}
+
+.candidate{
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .photo-card{
@@ -99,13 +113,6 @@ border-radius:20px;
 width:320px;
 display:flex;
 justify-content:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.candidate{
-display:flex;
-flex-direction:column;
-align-items:center;
 }
 
 .candidate-img{
@@ -114,21 +121,26 @@ display:block;
 }
 
 .name-banner{
-background-image:url("button.jpg");
+background-image:url("button.png");
 background-size:100% 100%;
 background-repeat:no-repeat;
+
 width:320px;
 height:90px;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 color:white;
 font-weight:bold;
 font-size:22px;
 letter-spacing:1px;
+
 margin-top:-35px; 
 text-align:center;
 }
+
 
 .vision-mission{
 width:450px;
@@ -150,18 +162,11 @@ border-radius:15px;
 box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* PERBAIKAN TEKS */
 .box p{
-display:flex;
-align-items:flex-start;
-gap:10px;
-font-size:16px;
 margin:10px 0;
+font-size:16px;
 }
 
-.box span:first-child{
-min-width:20px;
-}
 
 .buttons{
 margin-top:20px;
@@ -182,25 +187,75 @@ cursor:pointer;
 .vote:hover, .back:hover{
 background:#1b5e20;
 }
+
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.25);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.popup{
+background:#eee;
+padding:50px 60px;
+border-radius:20px;
+width:600px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.popup-text{
+font-size:28px;
+line-height:1.4;
+margin-bottom:40px;
+}
+
+.popup-buttons{
+display:flex;
+justify-content:center;
+gap:60px;
+}
+
+.btn-save,
+.btn-cancel{
+background:#d9d9d9;
+border:none;
+padding:15px 40px;
+border-radius:12px;
+font-size:22px;
+cursor:pointer;
+}
+
+
+.btn-save{
+color:green;
+}
+
+.btn-cancel{
+color:red;
+}
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
   <div class="sidebar">
-    <h2>Sistem<br>E-Voting</h2>
+    <h2>Sistem<br>DIGI-VOTE</h2>
 
-    <div class="menu">
-      <ul>
-        <li>Voting</a></li>
-        <li><a href="halaman11.php">Hasil Voting</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li>Voting</a></li>
+      <li>Hasil Voting</a></li>
+    </ul>
 
     <div class="logout">
-      <a href="halaman1.php">Log Out →</a>
+      <a>Log Out →</a>
     </div>
   </div>
 
@@ -214,7 +269,7 @@ background:#1b5e20;
 
       <div class="candidate">
         <div class="photo-card">
-          <img src="kandidat1.png" class="candidate-img">
+          <img src="kandidat1.png">
         </div>
 
         <div class="name-banner">
@@ -243,8 +298,8 @@ background:#1b5e20;
         </div>
 
         <div class="buttons">
-          <button class="vote" onclick="window.location.href='halaman5.php'">VOTING</button>
-          <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
+          <button class="vote">VOTING</button>
+          <button class="back">KEMBALI</button>
         </div>
 
       </div>
@@ -254,6 +309,30 @@ background:#1b5e20;
   </div>
 
 </div>
+<div class="overlay">
 
+  <div class="popup">
+
+    <p class="popup-text">
+      Yakin dengan pilihan anda?<br>
+      Setelah klik “Simpan”, pilihan<br>
+      anda tidak dapat diubah.
+    </p>
+
+    <div class="popup-buttons">
+
+      <a href="halaman9.php" class="btn-save" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✓ Simpan
+      </a>
+
+      <a href="halaman4.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✗ Batal
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>
