@@ -18,7 +18,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 height:100vh;
-background-image:url("background.jpeg");
+background-image:url("background.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -103,7 +103,7 @@ background:#2c5223;
 
     <div class="login-card">
 
-        <img src="logo.png" class="logo">
+        <img src="logo.jpg" class="logo">
 
         <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
 

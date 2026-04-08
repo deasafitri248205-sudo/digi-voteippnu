@@ -87,13 +87,13 @@ display:inline-block;
 
 <body>
 
-<img src="logo.png" class="logo">
+<img src="logo.jpg" class="logo">
 
 <div class="container">
 
     <div class="card">
 
-        <img src="orang.png" class="illustration">
+        <img src="orang.jpg" class="illustration">
 
         <h2>LOGIN GAGAL!</h2>
 
