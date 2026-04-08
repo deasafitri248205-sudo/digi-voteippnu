@@ -4,135 +4,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daftar Kandidat</title>
+<link rel="stylesheet" href="style.css">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpg");
-background-size:cover;
-background-position:center;
-height:100vh;
+    background-image:url("background.jpg");
+    background-size:cover;
+    background-position:center;
+    height:100vh;
 }
 
 .container{
-display:flex;
-height:100vh;
+    display:flex;
+    height:100vh;
 }
 
 .sidebar{
-width:220px;
-background:rgba(150,190,160,0.8);
-padding:40px 20px;
-color:white;
-display:flex;
-flex-direction:column;
-align-items:center; 
+    width:220px;
+    background:rgba(150,190,160,0.8);
+    padding:40px 20px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between; /* biar logout ke bawah */
 }
 
 .sidebar h2{
-text-align:center;
-margin-bottom:50px;
+    text-align:center;
 }
 
 .sidebar ul{
-list-style:none;
-text-align:center;
+    list-style:none;
+    text-align:center;
+    padding:0;
+    margin-top:50px;
 }
 
 .sidebar li{
-margin:30px 0;
-font-size:20px;
-cursor:pointer;
+    margin:25px 0; /* jarak antar menu */
+    font-size:20px;
+}
+
+.sidebar a{
+    text-decoration:none;
+    color:white;
 }
 
 .logout{
-margin-top:120px;
-font-size:18px;
-cursor:pointer;
-text-align:center;
+    margin-bottom:20px;
+    font-size:18px;
 }
 
 .main{
-flex:1;
-text-align:center;
-padding:40px;
-position:relative;
+    flex:1;
+    text-align:center;
+    padding:40px;
+    position:relative;
 }
 
 .logo{
-position:absolute;
-top:20px;
-right:20px;
-width:70px;
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:70px;
 }
 
 .main h1{
-margin-bottom:40px;
-letter-spacing:2px;
+    margin-bottom:40px;
+    letter-spacing:2px;
 }
 
 .card-container{
-display:flex;
-justify-content:center;
-gap:40px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
 }
 
 .card{
-background:#f2f2f2;
-padding:20px;
-width:220px;
-border-radius:15px;
-box-shadow:0 8px 15px rgba(0,0,0,0.2);
-cursor:pointer;
-transition:0.2s;
-}
-
-/* hover */
-.card:hover{
-transform: translateY(-5px);
-}
-
-/* klik */
-.card:active{
-transform: scale(0.97);
+    background:#f2f2f2;
+    padding:20px;
+    width:220px;
+    border-radius:15px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
 }
 
 .card h2{
-margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 .card img{
-width:120px;
-margin:15px 0;
+    width:120px;
+    margin:15px 0;
 }
 
-.card button{
-background:#2e7d32;
-color:white;
-border:none;
-padding:10px 25px;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-transition:0.2s;
+.btn{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    padding:10px 25px;
+    border-radius:10px;
+    font-size:16px;
+    text-decoration:none;
 }
 
-/* hover tombol */
-.card button:hover{
-background:#1b5e20;
-transform: scale(1.05);
-}
-
-/* klik tombol */
-.card button:active{
-transform: scale(0.95);
-background:#145a1a;
+.btn:hover{
+    background:#1b5e20;
 }
 </style>
 </head>
@@ -142,15 +126,15 @@ background:#145a1a;
 <div class="container">
 
     <div class="sidebar">
-        <h2>Sistem<br>DIGI-VOTE</h2>
+        <h2>Sistem<br>E-Voting</h2>
 
         <ul>
-            <li>Voting</li>
-            <li>Hasil Voting</li>
+            <li><a>Voting</a></li>
+            <li><a href="halaman10.php">Hasil Voting</a></li>
         </ul>
 
         <div class="logout">
-            Log Out →
+            <a href="halaman1.php">Log Out →</a>
         </div>
     </div>
 
@@ -162,22 +146,22 @@ background:#145a1a;
 
         <div class="card-container">
 
-            <div class="card" onclick="window.location.href='halaman4.php'">
+            <div class="card">
                 <h2>KANDIDAT 1</h2>
-                <img src="kandidat1.jpg">
-                <button>DETAIL</button>
+                <img src="kandidat1.png">
+                <a href="halaman4.php" class="btn">DETAIL</a>
             </div>
 
-            <div class="card" onclick="window.location.href='halaman4.php'">
+            <div class="card">
                 <h2>KANDIDAT 2</h2>
-                <img src="kandidat2.jpg">
-                <button>DETAIL</button>
+                <img src="kandidat2.png">
+                <a href="halaman6.php" class="btn">DETAIL</a>
             </div>
 
-            <div class="card" onclick="window.location.href='halaman4.php'">
+            <div class="card">
                 <h2>KANDIDAT 3</h2>
-                <img src="kandidat3.jpg">
-                <button>DETAIL</button>
+                <img src="kandidat3.png">
+                <a href="halaman8.php" class="btn">DETAIL</a>
             </div>
 
         </div>

@@ -6,8 +6,7 @@
 <title>Detail Kandidat</title>
 <link rel="stylesheet" href="style.css">
 <style>
-    
-.{
+  *{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -15,7 +14,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpeg");
+background-image:url("background.jpg");
 background-size:cover;
 background-position:center;
 height:100vh;
@@ -35,6 +34,7 @@ color:white;
 display:flex;
 flex-direction:column;
 align-items:center;
+height:100vh;
 }
 
 .sidebar h2{
@@ -44,7 +44,11 @@ margin-bottom:60px;
 
 .sidebar ul{
 list-style:none;
-text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+flex:1;
 }
 
 .sidebar li{
@@ -246,11 +250,13 @@ color:red;
     <h2>Sistem<br>DIGI-VOTE</h2>
 
     <ul>
-      <li>Voting</li>
-      <li>Hasil Voting</li>
+      <li>Voting</a></li>
+      <li>Hasil Voting</a></li>
     </ul>
 
-    <div class="logout">Log Out →</div>
+    <div class="logout">
+      <a>Log Out →</a>
+    </div>
   </div>
 
   <div class="main">
@@ -277,7 +283,7 @@ color:red;
           <img src="visi.png" class="title-img">
 
           <div class="box">
-            <p>✔ Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</p>
+            <p><span>✔</span><span>Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</span></p>
           </div>
         </div>
 
@@ -285,9 +291,9 @@ color:red;
           <img src="misi.png" class="title-img">
 
           <div class="box">
-            <p>✔ Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>
-            <p>✔ Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>
-            <p>✔ Mengadakan kegiatan yang mendukung prestasi pelajar</p>
+            <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</span></p>
+            <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</span></p>
+            <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar</span></p>
           </div>
         </div>
 
@@ -315,13 +321,13 @@ color:red;
 
     <div class="popup-buttons">
 
-      <button class="btn-save">
+      <a href="halaman9.php" class="btn-save" style="text-decoration:none; display:inline-block; text-align:center;">
         ✓ Simpan
-      </button>
+      </a>
 
-      <button class="btn-cancel">
+      <a href="halaman4.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
         ✗ Batal
-      </button>
+      </a>
 
     </div>
 

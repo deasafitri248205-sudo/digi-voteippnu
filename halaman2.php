@@ -18,81 +18,82 @@ if(isset($_GET['error'])){
 <title>Login Gagal</title>
 <link rel="stylesheet" href="style.css">
 <style>
-    *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-height:85vh;
-background-image:url("background.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
+    height:85vh;
+    background-image:url("background.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .logo{
-position:absolute;
-top:20px;
-left:20px;
-width:60px;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:60px;
 }
 
 .container{
-display:flex;
-justify-content:center;
-align-items:center;
-width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 }
 
 .card{
-background:#f2f2f2;
-width:420px;
-padding:40px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    background:#f2f2f2;
+    width:420px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 .illustration{
-width:150px;
-margin-bottom:15px;
+    width:150px;
+    margin-bottom:15px;
 }
 
 .card h2{
-color:#2e6b2e;
-margin-bottom:5px;
+    color:#2e6b2e;
+    margin-bottom:5px;
 }
 
 .card p{
-color:#2e6b2e;
-margin-bottom:25px;
-font-size:18px;
+    color:#2e6b2e;
+    margin-bottom:25px;
+    font-size:18px;
 }
 
 .btn{
-background:#2f6f1f;
-color:white;
-border:none;
-padding:12px 30px;
-font-size:18px;
-border-radius:8px;
-cursor:pointer;
-display:inline-flex;
-align-items:center;
-gap:10px;
+    ackground:#2f6f1f;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
 }
 
 .circle{
-width:15px;
-height:15px;
-border:2px solid white;
-border-radius:50%;
-display:inline-block;
+    width:15px;
+    height:15px;
+    border:2px solid white;
+    border-radius:50%;
+    display:inline-block;
 }
 </style>
 </head>
