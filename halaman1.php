@@ -1,22 +1,15 @@
 <?php
-$nomorBenar = "123456";
-$kodeBenar = "ippnu";
 
-if(isset($_POST['nomor'])){
-    $nomor = $_POST['nomor'];
-    $kode = $_POST['kode'];
-
-    if($nomor == $nomorBenar && $kode == $kodeBenar){
-        header("Location: halaman3.php");
-        exit;
+if($nomor == $nomorBenar && $kode == $kodeBenar){
+    header("Location: halaman3.php");
+    exit;
+}else{
+    if($nomor != $nomorBenar){
+        header("Location: halaman2.php?error=nomor");
     }else{
-        if($nomor != $nomorBenar){
-            header("Location: halaman2.php?error=nomor");
-        }else{
-            header("Location: halaman2.php?error=kode");
-        }
-        exit;
+        header("Location: halaman2.php?error=kode");
     }
+    exit;
 }
 ?>
 
@@ -28,18 +21,17 @@ if(isset($_POST['nomor'])){
 <title>Digi Vote IPPNU</title>
 <link rel="stylesheet" href="style.css">
 
+<!-- icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-<<<<<<< HEAD
 height:100vh;
 background-image:url("background.jpg");
 background-size:cover;
@@ -47,84 +39,75 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-=======
-    height:100vh;
-    background-image:url("background.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
->>>>>>> eab3f3f2a5d1552266800f9df0b82ae6919e2ae6
 }
 
 .container{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .login-card{
-    background:#f5f5f5;
-    padding:40px;
-    width:350px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+background:#f5f5f5;
+padding:40px;
+width:350px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 .logo{
-    width:80px;
-    margin-bottom:10px;
+width:80px;
+margin-bottom:10px;
 }
 
 .login-card h2{
-    color:#2f6f3e;
-    font-size:20px;
-    margin-bottom:8px;
+color:#2f6f3e;
+font-size:20px;
+margin-bottom:8px;
 }
 
 .login-card p{
-    font-size:13px;
-    margin-bottom:20px;
+font-size:13px;
+margin-bottom:20px;
 }
 
 .input-box{
-    display:flex;
-    align-items:center;
-    background:#9bbf9c;
-    padding:10px;
-    border-radius:8px;
-    margin-bottom:15px;
+display:flex;
+align-items:center;
+background:#9bbf9c;
+padding:10px;
+border-radius:8px;
+margin-bottom:15px;
 }
 
 .input-box i{
-    argin-right:10px;
-    color:#1e3d27;
+margin-right:10px;
+color:#1e3d27;
 }
 
 .input-box input{
-    border:none;
-    outline:none;
-    background:transparent;
-    width:100%;
-    color:#fff;
+border:none;
+outline:none;
+background:transparent;
+width:100%;
+color:#fff;
 }
 
 .btn{
-    width:100%;
-    padding:12px;
-    border:none;
-    background:#3d6e2f;
-    color:white;
-    font-weight:bold;
-    border-radius:8px;
-    cursor:pointer;
+width:100%;
+padding:12px;
+border:none;
+background:#3d6e2f;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
 }
 
 .btn:hover{
-    background:#2c5223;
+background:#2c5223;
 }
 </style>
 
@@ -136,7 +119,7 @@ justify-content:center;
 
     <div class="login-card">
 
-        <img src="logo.jpg" class="logo">
+        <img src="logo.png" class="logo">
 
         <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
 
