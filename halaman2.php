@@ -100,7 +100,7 @@ body{
 
 <body>
 
-<img src="logo.png" class="logo">
+<img src="logo.jpg" class="logo">
 
 <div class="container">
 

@@ -39,6 +39,15 @@ if(isset($_POST['nomor'])){
 }
 
 body{
+<<<<<<< HEAD
+height:100vh;
+background-image:url("background.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+=======
     height:100vh;
     background-image:url("background.jpg");
     background-size:cover;
@@ -46,6 +55,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+>>>>>>> eab3f3f2a5d1552266800f9df0b82ae6919e2ae6
 }
 
 .container{
@@ -126,7 +136,7 @@ body{
 
     <div class="login-card">
 
-        <img src="logo.png" class="logo">
+        <img src="logo.jpg" class="logo">
 
         <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
 
