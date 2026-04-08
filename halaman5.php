@@ -6,60 +6,61 @@
 <title>Detail Kandidat</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpg");
-background-size:cover;
-background-position:center;
-height:100vh;
+  background-image:url("background.jpg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
 }
 
 .container{
-display:flex;
-height:100vh;
+  display:flex;
+  height:100vh;
 }
 
 
 .sidebar{
-width:220px;
-background:rgba(150,190,160,0.8);
-padding:40px 20px;
-color:white;
-display:flex;
-flex-direction:column;
-align-items:center;
-height:100vh;
+  width:220px;
+  background:rgba(150,190,160,0.8);
+  padding:40px 20px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  height:100vh;
 }
 
 .sidebar h2{
-text-align:center;
-margin-bottom:60px;
+  text-align:center;
+  margin-bottom:60px;
 }
 
 .sidebar ul{
-list-style:none;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-flex:1;
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  flex:1;
 }
 
 .sidebar li{
-margin:30px 0;
-font-size:20px;
-cursor:pointer;
+  margin:30px 0;
+  font-size:20px;
+  cursor:pointer;
 }
 
 .logout{
-margin-top:auto;
-font-size:18px;
+  margin-top:auto;
+  font-size:18px;
 }
 
 
@@ -247,7 +248,7 @@ color:red;
 <div class="container">
 
   <div class="sidebar">
-    <h2>Sistem<br>DIGI-VOTE</h2>
+    <h2>Sistem<br>E-Voting</h2>
 
     <ul>
       <li>Voting</a></li>

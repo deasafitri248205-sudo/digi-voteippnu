@@ -178,11 +178,11 @@ background:#1b5e20;
 <div class="container">
 
   <div class="sidebar">
-    <h2>Sistem<br>DIGI-VOTE</h2>
+    <h2>Sistem<br>E-Voting</h2>
 
     <ul>
-      <li><a href="voting.html">Voting</a></li>
-      <li><a href="hasil.html">Hasil Voting</a></li>
+      <li>Voting</a></li>
+      <li><a href="halaman9.php">Hasil Voting</a></li>
     </ul>
 
     <div class="logout">Log Out →</div>
@@ -212,7 +212,7 @@ background:#1b5e20;
           <img src="visi.png" class="title-img">
 
           <div class="box">
-            <p>✔ Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik. Mewujudkan IPNU sebagai wadah pelajar NU yang solid, kreatif, dan berlandaskan nilai Ahlussunnah Wal Jama’ah.</p>
+            <p><span>✔</span><span>Mewujudkan IPNU sebagai wadah pelajar NU yang solid, kreatif, dan berlandaskan nilai Ahlussunnah Wal Jama’ah..</span></p>
           </div>
         </div>
 

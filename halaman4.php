@@ -8,179 +8,178 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpg");
-background-size:cover;
-background-position:center;
-height:100vh;
+  background-image:url("background.jpg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
 }
 
 .container{
-display:flex;
-height:100vh;
+  display:flex;
+  height:100vh;
 }
 
 .sidebar{
-width:220px;
-background:rgba(150,190,160,0.8);
-padding:40px 20px;
-color:white;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:space-between; /* logout ke bawah */
+  width:220px;
+  background:rgba(150,190,160,0.8);
+  padding:40px 20px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between; /* logout ke bawah */
 }
 
 .sidebar h2{
-text-align:center;
+  text-align:center;
 }
 
 .menu{
-flex:1;
-display:flex;
-align-items:center; /* menu ke tengah */
+  flex:1;
+  display:flex;
+  align-items:center; /* menu ke tengah */
 }
 
 .sidebar ul{
-list-style:none;
-text-align:center;
-padding:0;
+  list-style:none;
+  text-align:center;
+  padding:0;
 }
 
 .sidebar li{
-margin:25px 0;
-font-size:20px;
+  margin:25px 0;
+  font-size:20px;
 }
 
 .sidebar a{
-text-decoration:none;
-color:white;
+  text-decoration:none;
+  color:white;
 }
 
 .logout{
-margin-bottom:20px;
-font-size:18px;
+  margin-bottom:20px;
+  font-size:18px;
 }
 
 .main{
-flex:1;
-padding:40px;
-position:relative;
+  flex:1;
+  padding:40px;
+  position:relative;
 }
 
 .logo{
-position:absolute;
-top:20px;
-right:20px;
-width:70px;
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:70px;
 }
 
 .main h1{
-text-align:center;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .content{
-display:flex;
-justify-content:center;
-gap:60px;
+  display:flex;
+  justify-content:center;
+  gap:60px;
 }
 
 .photo-card{
-background:#eee;
-padding:30px;
-border-radius:20px;
-width:320px;
-display:flex;
-justify-content:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  background:#eee;
+  padding:30px;
+  border-radius:20px;
+  width:320px;
+  display:flex;
+  justify-content:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 .candidate{
-display:flex;
-flex-direction:column;
-align-items:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .candidate-img{
-width:220px;
-display:block;
+  width:220px;
+  display:block;
 }
 
 .name-banner{
-background-image:url("button.jpg");
-background-size:100% 100%;
-background-repeat:no-repeat;
-width:320px;
-height:90px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-weight:bold;
-font-size:22px;
-letter-spacing:1px;
-margin-top:-35px; 
-text-align:center;
+  background-image:url("button.jpg");
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  width:320px;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:bold;
+  font-size:22px;
+  letter-spacing:1px;
+  margin-top:-35px; 
+  text-align:center;
 }
 
 .vision-mission{
-width:450px;
+  width:450px;
 }
 
 .section{
-margin-bottom:30px;
+  margin-bottom:30px;
 }
 
 .title-img{
-width:150px;
-margin-bottom:-10px;
+  width:150px;
+  margin-bottom:-10px;
 }
 
 .box{
-background:#f5f5f5;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  background:#f5f5f5;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* PERBAIKAN TEKS */
 .box p{
-display:flex;
-align-items:flex-start;
-gap:10px;
-font-size:16px;
-margin:10px 0;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:16px;
+  margin:10px 0;
 }
 
 .box span:first-child{
-min-width:20px;
+  min-width:20px;
 }
 
 .buttons{
-margin-top:20px;
-display:flex;
-gap:20px;
+  margin-top:20px;
+  display:flex;
+  gap:20px;
 }
 
 .vote, .back{
-background:#2e7d32;
-color:white;
-border:none;
-padding:10px 25px;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  padding:10px 25px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
 }
 
 .vote:hover, .back:hover{
-background:#1b5e20;
+  background:#1b5e20;
 }
 </style>
 </head>
