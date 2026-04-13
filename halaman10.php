@@ -7,7 +7,7 @@
         body{
     margin:0;
     font-family: serif;
-    background-image: url("background.jpg");
+    background-image: url("background.jpeg");
     background-size: cover;
 }
 
@@ -116,7 +116,7 @@ button{
 <div class="container">
 
     <div class="sidebar">
-    <h2>Sistem<br>E-Voting</h2>
+    <h2>Sistem<br>E- Voting</h2>
 
     <ul>
       <li>Voting</li>
@@ -133,8 +133,9 @@ button{
                 Pilihan anda sudah kami simpan, Terima kasih sudah
                 berpartisipasi dalam voting ini.
             </p>
+            
+            <button type="submit" class="btn">KEMBALI KE HALAMAN LOGIN</button>
 
-            <button>KEMBALI KE HALAMAN LOGIN</button>
         </div>
     </div>
 

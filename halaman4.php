@@ -241,7 +241,7 @@ body{
           </div>
         </div>
 
-        <div class="buttons">
+        <div class="button.png">
           <button class="vote" onclick="window.location.href='halaman5.php'">VOTING</button>
           <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
         </div>

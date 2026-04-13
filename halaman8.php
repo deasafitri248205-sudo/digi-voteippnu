@@ -5,199 +5,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detail Kandidat</title>
 <link rel="stylesheet" href="style.css">
+
 <style>
-  *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background-image:url("background.jpeg");
-background-size:cover;
-background-position:center;
-height:100vh;
+  background-image:url("background.jpg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
 }
 
 .container{
-display:flex;
-height:100vh;
+  display:flex;
+  height:100vh;
 }
 
-
 .sidebar{
-width:220px;
-background:rgba(150,190,160,0.8);
-padding:40px 20px;
-color:white;
-display:flex;
-flex-direction:column;
-align-items:center;
+  width:220px;
+  background:rgba(150,190,160,0.8);
+  padding:40px 20px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between; /* logout ke bawah */
 }
 
 .sidebar h2{
-text-align:center;
-margin-bottom:60px;
+  text-align:center;
+}
+
+.menu{
+  flex:1;
+  display:flex;
+  align-items:center; /* menu ke tengah */
 }
 
 .sidebar ul{
-list-style:none;
-text-align:center;
+  list-style:none;
+  text-align:center;
+  padding:0;
 }
 
 .sidebar li{
-margin:30px 0;
-font-size:20px;
-cursor:pointer;
+  margin:25px 0;
+  font-size:20px;
+}
+
+.sidebar a{
+  text-decoration:none;
+  color:white;
 }
 
 .logout{
-margin-top:auto;
-font-size:18px;
+  margin-bottom:20px;
+  font-size:18px;
 }
 
-
 .main{
-flex:1;
-padding:40px;
-position:relative;
+  flex:1;
+  padding:40px;
+  position:relative;
 }
 
 .logo{
-position:absolute;
-top:20px;
-right:20px;
-width:70px;
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:70px;
 }
 
 .main h1{
-text-align:center;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
-
 
 .content{
-display:flex;
-justify-content:center;
-gap:60px;
+  display:flex;
+  justify-content:center;
+  gap:60px;
 }
-
 
 .photo-card{
-background:#eee;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.photo-card img{
-width:200px;
+  background:#eee;
+  padding:30px;
+  border-radius:20px;
+  width:320px;
+  display:flex;
+  justify-content:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 .candidate{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.photo-card{
-background:#eee;
-padding:30px;
-border-radius:20px;
-width:320px;
-display:flex;
-justify-content:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .candidate-img{
-width:220px;
-display:block;
+  width:220px;
+  display:block;
 }
 
 .name-banner{
-background-image:url("button.png");
-background-size:100% 100%;
-background-repeat:no-repeat;
-
-width:320px;
-height:90px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-color:white;
-font-weight:bold;
-font-size:22px;
-letter-spacing:1px;
-
-margin-top:-35px; 
-text-align:center;
-}
-
-.banner{
-    width: 100%;
-    display: flex;
-    justify-content: center;   
-    align-items: center;      
-    text-align: center;
-}
-
-.nama{
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
+  background-image:url("button.jpg");
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  width:320px;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:bold;
+  font-size:22px;
+  letter-spacing:1px;
+  margin-top:-35px; 
+  text-align:center;
 }
 
 .vision-mission{
-width:450px;
+  width:450px;
 }
 
 .section{
-margin-bottom:30px;
+  margin-bottom:30px;
 }
 
 .title-img{
-width:150px;
-margin-bottom:-10px;
+  width:150px;
+  margin-bottom:-10px;
 }
 
 .box{
-background:#f5f5f5;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  background:#f5f5f5;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
 .box p{
-margin:10px 0;
-font-size:16px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:16px;
+  margin:10px 0;
 }
 
+.box span:first-child{
+  min-width:20px;
+}
 
 .buttons{
-margin-top:20px;
-display:flex;
-gap:20px;
+  margin-top:20px;
+  display:flex;
+  gap:20px;
 }
 
 .vote, .back{
-background:#2e7d32;
-color:white;
-border:none;
-padding:10px 25px;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  padding:10px 25px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
 }
 
 .vote:hover, .back:hover{
-background:#1b5e20;
+  background:#1b5e20;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -205,25 +191,29 @@ background:#1b5e20;
   <div class="sidebar">
     <h2>Sistem<br>E-Voting</h2>
 
-    <ul>
-      <li>Voting</li>
-      <li>Hasil Voting</li>
-    </ul>
+    <div class="menu">
+      <ul>
+        <li>Voting</a></li>
+        <li><a href="halaman11.php">Hasil Voting</a></li>
+      </ul>
+    </div>
 
-    <div class="logout">Log Out →</div>
+    <div class="logout">
+      <a href="halaman1.php">Log Out →</a>
+    </div>
   </div>
 
   <div class="main">
 
     <img src="logo.png" class="logo">
 
-    <h1>KANDIDAT 2</h1>
+    <h1>KANDIDAT 3</h1>
 
     <div class="content">
 
       <div class="candidate">
         <div class="photo-card">
-          <img src="kandidat3.png">
+          <img src="kandidat3.png" class="candidate-img">
         </div>
 
         <div class="name-banner">
@@ -237,7 +227,7 @@ background:#1b5e20;
           <img src="visi.png" class="title-img">
 
           <div class="box">
-            <p>✔ Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.Mewujudkan IPNU sebagai wadah pelajar NU yang solid, kreatif, dan berlandaskan nilai Ahlussunnah Wal Jama’ah.</p>
+            <p><span>✔</span><span>Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</span></p>
           </div>
         </div>
 
@@ -245,15 +235,15 @@ background:#1b5e20;
           <img src="misi.png" class="title-img">
 
           <div class="box">
-            <p>✔ Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>
-            <p>✔ Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>
-            <p>✔ Mengadakan kegiatan yang mendukung prestasi pelajar</p>
+            <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPPNU.</span></p>
+            <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi.</span></p>
+            <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar.</span></p>
           </div>
         </div>
 
-        <div class="buttons">
-          <button class="vote">VOTING</button>
-          <button class="back">KEMBALI</button>
+        <div class="button.png">
+          <button class="vote" onclick="window.location.href='halaman5.php'">VOTING</button>
+          <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
         </div>
 
       </div>
