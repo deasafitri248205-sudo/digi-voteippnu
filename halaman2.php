@@ -1,11 +1,23 @@
 <?php
-$pesan = "Nomor anggota dan Kode salah";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-if(isset($_GET['error'])){
-    if($_GET['error'] == "nomor"){
-        $pesan = "Nomor anggota salah!";
-    }elseif($_GET['error'] == "kode"){
-        $pesan = "Kode salah!";
+    $nomor = $_POST['nomor'];
+    $kode = $_POST['kode'];
+
+    // contoh data benar
+    $nomorBenar = "123456";
+    $kodeBenar = "ippnu";
+
+    if($nomor == $nomorBenar && $kode == $kodeBenar){
+        header("Location: halaman3.php");
+        exit;
+    }else{
+        if($nomor != $nomorBenar){
+            header("Location: halaman2.php?error=nomor");
+        }else{
+            header("Location: halaman2.php?error=kode");
+        }
+        exit;
     }
 }
 ?>
@@ -15,113 +27,131 @@ if(isset($_GET['error'])){
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Gagal</title>
-<link rel="stylesheet" href="style.css">
-<style>
+<title>Digi Vote IPPNU</title>
 
+<link rel="stylesheet" href="style.css">
+
+<!-- icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    height:85vh;
-    background-image:url("background.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.logo{
-    position:absolute;
-    top:20px;
-    left:20px;
-    width:60px;
+height:100vh;
+background-image:url("background.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.card{
-    background:#f2f2f2;
-    width:420px;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+.login-card{
+background:#f5f5f5;
+padding:40px;
+width:350px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.illustration{
-    width:150px;
-    margin-bottom:15px;
+.logo{
+width:80px;
+margin-bottom:10px;
 }
 
-.card h2{
-    color:#2e6b2e;
-    margin-bottom:5px;
+.login-card h2{
+color:#2f6f3e;
+font-size:20px;
+margin-bottom:8px;
 }
 
-.card p{
-    color:#2e6b2e;
-    margin-bottom:25px;
-    font-size:18px;
+.login-card p{
+font-size:13px;
+margin-bottom:20px;
+}
+
+.input-box{
+display:flex;
+align-items:center;
+background:#9bbf9c;
+padding:10px;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+.input-box i{
+margin-right:10px;
+color:#1e3d27;
+}
+
+.input-box input{
+border:none;
+outline:none;
+background:transparent;
+width:100%;
+color:#fff;
 }
 
 .btn{
-    ackground:#2f6f1f;
-    color:white;
-    border:none;
-    padding:12px 30px;
-    font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+width:100%;
+padding:12px;
+border:none;
+background:#3d6e2f;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
 }
 
-.circle{
-    width:15px;
-    height:15px;
-    border:2px solid white;
-    border-radius:50%;
-    display:inline-block;
+.btn:hover{
+background:#2c5223;
 }
 </style>
 </head>
 
 <body>
 
-<img src="logo.jpg" class="logo">
-
+<form method="POST" action="">
 <div class="container">
 
-    <div class="card">
+    <div class="login-card">
 
-        <img src="orang.jpg" class="illustration">
+        <img src="logo.png" class="logo">
 
-        <h2>LOGIN GAGAL!</h2>
+        <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
 
-        <p><?php echo $pesan; ?></p>
+        <p>Silahkan masuk untuk memberikan hak suara</p>
 
-    <a href="halaman1.php">
-        <button class="btn">
-            COBA LAGI
-            <span class="circle"></span>
-        </button>
-    </a>
+        <div class="input-box">
+            <i class="fa fa-user"></i>
+            <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota" required>
+        </div>
+
+        <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" name="kode" placeholder="Masukkan Kode" required>
+        </div>
+
+        <button type="submit" class="btn">MASUK</button>
 
     </div>
 
 </div>
+</form>
 
 </body>
 </html>

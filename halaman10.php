@@ -7,7 +7,7 @@
         body{
     margin:0;
     font-family: serif;
-    background-image: url("background.jpeg");
+    background-image: url("background.jpg");
     background-size: cover;
 }
 
@@ -116,7 +116,7 @@ button{
 <div class="container">
 
     <div class="sidebar">
-    <h2>Sistem<br>DIGI-VOTE</h2>
+    <h2>Sistem<br>E-Voting</h2>
 
     <ul>
       <li>Voting</li>

@@ -203,7 +203,7 @@ background:#1b5e20;
 <div class="container">
 
   <div class="sidebar">
-    <h2>Sistem<br>DIGI-VOTE</h2>
+    <h2>Sistem<br>E-Voting</h2>
 
     <ul>
       <li>Voting</li>

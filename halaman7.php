@@ -10,7 +10,7 @@ padding:0;
 box-sizing:border-box;    
 font-family:Arial, Helvetica, sans-serif;    
 }  body{  
-background-image:url("background.jpeg");  
+background-image:url("background.jpg");  
 background-size:cover;  
 background-position:center;  
 height:100vh;  
@@ -225,7 +225,7 @@ color:red;
 
 </head>    
 <body>  <div class="container">    <div class="sidebar">    
-    <h2>Sistem<br>DIGI-VOTE</h2>  <ul>    
+    <h2>Sistem<br>E-Voting</h2>  <ul>    
   <li>Voting</li>    
   <li>Hasil Voting</li>    
 </ul>    <div class="logout">Log Out →</div>    </div>    <div class="main">  <img src="logo.png" class="logo">    <h1>KANDIDAT 1</h1>    <div class="content">      <div class="candidate">    

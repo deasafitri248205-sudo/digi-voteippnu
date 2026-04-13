@@ -1,15 +1,23 @@
 <?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-if($nomor == $nomorBenar && $kode == $kodeBenar){
-    header("Location: halaman3.php");
-    exit;
-}else{
-    if($nomor != $nomorBenar){
-        header("Location: halaman2.php?error=nomor");
+    $nomor = $_POST['nomor'];
+    $kode = $_POST['kode'];
+
+    $nomorBenar = "123456";
+    $kodeBenar = "ippnu";
+
+    if($nomor == $nomorBenar && $kode == $kodeBenar){
+        header("Location: halaman3.php");
+        exit;
     }else{
-        header("Location: halaman2.php?error=kode");
+        if($nomor != $nomorBenar){
+            header("Location: halaman2.php?error=nomor");
+        }else{
+            header("Location: halaman2.php?error=kode");
+        }
+        exit;
     }
-    exit;
 }
 ?>
 
@@ -19,12 +27,13 @@ if($nomor == $nomorBenar && $kode == $kodeBenar){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digi Vote IPPNU</title>
+
 <link rel="stylesheet" href="style.css">
 
-<!-- icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-    *{
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -90,9 +99,19 @@ color:#1e3d27;
 .input-box input{
 border:none;
 outline:none;
-background:transparent;
+background-color: transparent !important;
 width:100%;
 color:#fff;
+appearance:none;
+}
+
+.input-box input::placeholder{
+color:#e0e0e0;
+}
+
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0 1000px #9bbf9c inset !important;
+-webkit-text-fill-color: #fff !important;
 }
 
 .btn{
@@ -110,11 +129,11 @@ cursor:pointer;
 background:#2c5223;
 }
 </style>
-
 </head>
+
 <body>
 
-<form method="POST">
+<form method="POST" action="">
 <div class="container">
 
     <div class="login-card">
@@ -125,23 +144,22 @@ background:#2c5223;
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
 
-    <div class="input-box">
-        <i class="fa fa-user"></i>
-        <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota" required>
-    </div>
+        <div class="input-box">
+            <i class="fa fa-user"></i>
+            <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota" required>
+        </div>
 
-    <div class="input-box">
-        <i class="fa fa-lock"></i>
-        <input type="password" name="kode" placeholder="Masukkan Kode" required>
-        <i class="fa fa-eye-slash"></i>
-    </div>
+        <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" name="kode" placeholder="Masukkan Kode" required>
+        </div>
 
-    <button type="submit" class="btn">MASUK</button>
+        <button type="submit" class="btn">MASUK</button>
 
-</form>
     </div>
 
 </div>
+</form>
 
 </body>
 </html>
