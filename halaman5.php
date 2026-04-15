@@ -15,7 +15,7 @@
 }
 
 body{
-  background-image:url("background.jpg");
+  background-image:url("bg.jpeg");
   background-size:cover;
   background-position:center;
   height:100vh;
@@ -30,7 +30,7 @@ body{
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
-  padding:40px 20px;
+  padding:30px 20px;
   color:white;
   display:flex;
   flex-direction:column;
@@ -40,7 +40,7 @@ body{
 
 .sidebar h2{
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:30px;
 }
 
 .sidebar ul{
@@ -49,13 +49,15 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  margin:39px 0;
   flex:1;
 }
 
 .sidebar li{
-  margin:30px 0;
+  margin:39px 0;
   font-size:20px;
   cursor:pointer;
+  margin-top:0 px;
 }
 
 .logout{

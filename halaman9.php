@@ -28,20 +28,20 @@ body{
 
 
 .sidebar{
-  width:210px;
-  background:rgba(150,190,160,0.8);
-  padding:40px 20px;
+  width:200px;
+  background:rgba(120,170,140,0.9);
+  padding:60px 25px;
   color:white;
   display:flex;
   flex-direction:column;
   align-items:center;
-  height:100vh;
+  margin-top:-20px;
 }
 
 .sidebar h2{
-  text-align:center;
-  margin-bottom:60px;
-  margin-top:20px;
+  margin-bottom:80px;
+  line-height:1.5;
+  margin-top:-15px;
 }
 
 .sidebar ul{
@@ -55,7 +55,7 @@ body{
 }
 
 .sidebar li{
-  margin:30px 0;
+  margin:25px 0;
   font-size:20px;
   cursor:pointer;
   margin-top:-20px;

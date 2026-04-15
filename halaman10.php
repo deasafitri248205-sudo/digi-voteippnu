@@ -1,145 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Sistem E-Voting</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Kandidat</title>
+<link rel="stylesheet" href="style.css">
+<style>
 
-    <style>
 body{
-    margin:0;
-    font-family: serif;
-    background-image:url("background.jpg");
-    background-size: cover;
-    background-position: center;
+margin:0;
+font-family: "Times New Roman", serif;
+background-image:url("bg.jpeg");
+background-size: cover;
+background-position: center;
 }
 
-/* LINK */
-a{
-    text-decoration: none;
-    color: white;
-}
-
-.sidebar a:visited{
-    color: white;
-}
-
-/* LAYOUT */
+/* CONTAINER */
 .container{
-    display:flex;
-    min-height:100vh;
+display:flex;
+min-height:100vh;
+position:relative;
 }
 
 /* SIDEBAR */
 .sidebar{
-    width:180px;
-background:rgba(140,170,150,0.6);
+width:190px;
+background:rgba(120,160,130,0.35);
+backdrop-filter: blur(10px);
+padding:80px 25px;
 color:white;
 display:flex;
 flex-direction:column;
-justify-content:space-between;
-align-items:center;
-padding:30px 10px;
 }
 
+/* TITLE */
 .sidebar h2{
-    margin-bottom:80px;
-    line-height:1.5;
-    margin-top:-30px;
+line-height:1.6;
+font-size:22px;
+margin-bottom:120px;
 }
 
+/* MENU */
 .sidebar ul{
-    list-style:none;
-    padding:0;
-    margin:auto 0;
+list-style:none;
+padding:0;
 }
 
 .sidebar li{
-    margin:25px 0;
-    font-size:20px;
+margin:30px 0;
+font-size:18px;
 }
 
+/* LINK */
+.sidebar a{
+text-decoration:none;
+color:white;
+opacity:0.85;
+transition:0.2s;
+}
+
+.sidebar a:hover{
+opacity:1;
+transform:translateX(5px);
+}
+
+/* LOGOUT */
 .logout{
-    margin-top:auto;
-    font-size:18px;
+margin-top:auto;
+font-size:16px;
+opacity:0.8;
+}
+
+/* LOGO */
+.logo{
+position:absolute;
+top:20px;
+right:30px;
+width:75px;
 }
 
 /* CONTENT */
 .content{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 /* CARD */
 .card{
-    background:#f5f5f5;
-    padding:70px 60px;
-    width:600px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+background:#eaeaea;
+padding:50px 60px;
+width:520px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
+/* TEXT */
 .card p{
-    font-size:26px;
-    font-weight:bold;
-    line-height:1.6;
-    color:#333;
+font-size:22px;
+font-weight:600;
+line-height:1.8;
+color:#2b2b2b;
 }
 
 /* BUTTON */
 .btn{
-    margin-top:40px;
-    padding:14px 35px;
-    border:none;
-    border-radius:12px;
-    background:#bfbfbf;
-    font-weight:bold;
-    letter-spacing:1px;
-    cursor:pointer;
-    transition:0.2s;
+margin-top:35px;
+padding:12px 30px;
+border:none;
+border-radius:10px;
+background:#b5b5b5;
+font-weight:bold;
+font-size:13px;
+letter-spacing:1px;
+cursor:pointer;
+color:#333;
+transition:0.2s;
 }
 
-.btn:hover{
-    background:#9e9e9e;
-}
-    </style>
+.btn:hover </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>Sistem<br>E - Voting</h2>
+<img src="logo.png" class="logo">
 
-        <ul>
-            <li><a href="halaman3.php">Voting</a></li>
-            <li><a href="halaman11.php">Hasil Voting</a></li>
-        </ul>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Sistem<br>E - Voting</h2>
 
-        <div class="logout">
-            <a href="halaman1.php">Log Out →</a>
-        </div>
+    <ul>
+        <li><a href="halaman3.php">Voting</a></li>
+        <li><a href="halaman11.php">Hasil Voting</a></li>
+    </ul>
+
+    <div class="logout">
+        <a href="halaman1.php">Log Out →</a>
     </div>
+</div>
 
-    <!-- CONTENT -->
-    <div class="content">
-        <div class="card">
-            <p>
-                Pilihan anda sudah kami simpan,<br>
-                Terima kasih sudah berpartisipasi<br>
-                dalam voting ini.
-            </p>
+<!-- CONTENT -->
+<div class="content">
+    <div class="card">
+        <p>
+            Pilihan anda sudah kami simpan,<br>
+            Terima kasih sudah berpartisipasi<br>
+            dalam voting ini.
+        </p>
 
-            <a href="halaman1.php">
-                <button class="btn">KEMBALI KE HALAMAN LOGIN</button>
-            </a>
-
-        </div>
+        <a href="halaman1.php">
+            <button class="btn">KEMBALI KE HALAMAN LOGIN</button>
+        </a>
     </div>
+</div>
 
 </div>
 

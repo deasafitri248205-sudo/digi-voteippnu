@@ -4,21 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daftar Kandidat</title>
-<link rel="stylesheet" href="style.css">
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Poppins', Arial, sans-serif;
 }
 
 body{
-    background-image:url("background.jpg");
+    background-image:url("bg.jpeg");
     background-size:cover;
     background-position:center;
     height:100vh;
+    overflow:hidden;
 }
 
 .container{
@@ -28,95 +27,130 @@ body{
 
 .sidebar{
     width:220px;
-    background:rgba(150,190,160,0.8);
-    padding:40px 20px;
+    background:rgba(150,185,155,0.7);
+    backdrop-filter: blur(8px);
+    padding:60px 30px;
     color:white;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    justify-content:space-between; /* biar logout ke bawah */
 }
 
 .sidebar h2{
-    text-align:center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 300px;
+    text-align: left;
 }
 
 .sidebar ul{
-    list-style:none;
-    text-align:center;
-    padding:0;
-    margin-top:50px;
+    list-style: none;
+    flex-grow: 1;
 }
 
 .sidebar li{
-    margin:25px 0; /* jarak antar menu */
-    font-size:20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
 }
 
 .sidebar a{
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    opacity: 0.7;
 }
 
 .logout{
-    margin-bottom:20px;
-    font-size:18px;
+    margin-top: auto;
+    font-size: 18px;
+    padding-bottom: 20px;
 }
 
 .main{
-    flex:1;
-    text-align:center;
-    padding:40px;
-    position:relative;
+    flex: 1;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo{
-    position:absolute;
-    top:20px;
-    right:20px;
-    width:70px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 80px;
 }
 
 .main h1{
-    margin-bottom:40px;
-    letter-spacing:2px;
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    letter-spacing: 3px;
+    color: #333;
+    font-weight: bold;
 }
 
 .card-container{
-    display:flex;
-    justify-content:center;
-    gap:40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
 }
 
 .card{
-    background:#f2f2f2;
-    padding:20px;
-    width:220px;
-    border-radius:15px;
-    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+    background: #f9f9f9;
+    padding: 30px 20px;
+    width: 240px; 
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card h2{
-    margin-bottom:10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #333;
 }
 
 .card img{
-    width:120px;
-    margin:15px 0;
+    width: 150px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .btn{
-    display:inline-block;
-    background:#2e7d32;
-    color:white;
-    padding:10px 25px;
-    border-radius:10px;
-    font-size:16px;
-    text-decoration:none;
+    display: block;
+    background: #2e7d32;
+    color: white;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%; 
+    text-align: center;
+    transition: 0.3s;
 }
 
 .btn:hover{
-    background:#1b5e20;
+    background: #1b5e20;
 }
 </style>
 </head>

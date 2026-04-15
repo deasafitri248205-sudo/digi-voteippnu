@@ -10,7 +10,7 @@ padding:0;
 box-sizing:border-box;    
 font-family:Arial, Helvetica, sans-serif;    
 }  body{  
-background-image:url("background.jpg");  
+background-image:url("bg.jpeg");  
 background-size:cover;  
 background-position:center;  
 height:100vh;  

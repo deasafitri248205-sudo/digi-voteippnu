@@ -8,7 +8,7 @@
     body{
 margin:0;
 font-family: serif;
-background-image:url("background.jpeg");
+background-image:url("bg.jpeg");
 background-size:cover;
 }
 
