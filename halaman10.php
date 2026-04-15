@@ -2,111 +2,107 @@
 <html>
 <head>
     <title>Sistem E-Voting</title>
-    <link rel="stylesheet" href="style.css">
+
     <style>
-        body{
+body{
     margin:0;
     font-family: serif;
-    background-image: url("background.jpeg");
+    background-image:url("background.jpg");
     background-size: cover;
+    background-position: center;
 }
 
+/* LINK */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar a:visited{
+    color: white;
+}
+
+/* LAYOUT */
 .container{
-    display: flex;
-    height:100vh;
+    display:flex;
+    min-height:100vh;
 }
 
+/* SIDEBAR */
 .sidebar{
-width:220px;
-background:rgba(150,190,160,0.8);
-padding:40px 20px;
+    width:180px;
+background:rgba(140,170,150,0.6);
 color:white;
 display:flex;
 flex-direction:column;
+justify-content:space-between;
 align-items:center;
+padding:30px 10px;
 }
 
 .sidebar h2{
-text-align:center;
-margin-bottom:60px;
+    margin-bottom:80px;
+    line-height:1.5;
+    margin-top:-30px;
 }
 
 .sidebar ul{
-list-style:none;
-text-align:center;
+    list-style:none;
+    padding:0;
+    margin:auto 0;
 }
 
 .sidebar li{
-margin:30px 0;
-font-size:20px;
-cursor:pointer;
+    margin:25px 0;
+    font-size:20px;
 }
 
 .logout{
-margin-top:auto;
-font-size:18px;
+    margin-top:auto;
+    font-size:18px;
 }
 
-
-.title{
-    text-align:center;
-    color:white;
-    font-size:32px;
-    font-weight:600;
-}
-
-.title span{
-    font-weight:800;
-}
-
-.menu{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:40px;
-}
-
-.menu a{
-    color:white;
-    font-size:26px;
-    text-decoration:none;
-}
-
-.logout a{
-    color:white;
-    font-size:24px;
-    text-decoration:none;
-}
-
+/* CONTENT */
 .content{
     flex:1;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:20px;
 }
 
+/* CARD */
 .card{
-    background:#e6e6e6;
-    padding:50px;
-    width:450px;
+    background:#f5f5f5;
+    padding:70px 60px;
+    width:600px;
+    border-radius:20px;
     text-align:center;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .card p{
-    font-size:22px;
+    font-size:26px;
     font-weight:bold;
+    line-height:1.6;
+    color:#333;
 }
 
-button{
-    margin-top:20px;
-    padding:10px 20px;
+/* BUTTON */
+.btn{
+    margin-top:40px;
+    padding:14px 35px;
     border:none;
-    border-radius:8px;
+    border-radius:12px;
     background:#bfbfbf;
     font-weight:bold;
+    letter-spacing:1px;
     cursor:pointer;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#9e9e9e;
 }
     </style>
 </head>
@@ -115,26 +111,32 @@ button{
 
 <div class="container">
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
-    <h2>Sistem<br>E- Voting</h2>
+        <h2>Sistem<br>E - Voting</h2>
 
-    <ul>
-      <li>Voting</li>
-      <li>Hasil Voting</li>
-    </ul>
+        <ul>
+            <li><a href="halaman3.php">Voting</a></li>
+            <li><a href="halaman11.php">Hasil Voting</a></li>
+        </ul>
 
-    <div class="logout">Log Out →</div>
-  </div>
+        <div class="logout">
+            <a href="halaman1.php">Log Out →</a>
+        </div>
+    </div>
 
-
+    <!-- CONTENT -->
     <div class="content">
         <div class="card">
             <p>
-                Pilihan anda sudah kami simpan, Terima kasih sudah
-                berpartisipasi dalam voting ini.
+                Pilihan anda sudah kami simpan,<br>
+                Terima kasih sudah berpartisipasi<br>
+                dalam voting ini.
             </p>
-            
-            <button type="submit" class="btn">KEMBALI KE HALAMAN LOGIN</button>
+
+            <a href="halaman1.php">
+                <button class="btn">KEMBALI KE HALAMAN LOGIN</button>
+            </a>
 
         </div>
     </div>

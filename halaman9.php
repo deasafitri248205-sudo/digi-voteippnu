@@ -28,7 +28,7 @@ body{
 
 
 .sidebar{
-  width:220px;
+  width:210px;
   background:rgba(150,190,160,0.8);
   padding:40px 20px;
   color:white;
@@ -41,6 +41,7 @@ body{
 .sidebar h2{
   text-align:center;
   margin-bottom:60px;
+  margin-top:20px;
 }
 
 .sidebar ul{
@@ -49,6 +50,7 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  margin-top:-20px;
   flex:1;
 }
 
@@ -56,6 +58,7 @@ body{
   margin:30px 0;
   font-size:20px;
   cursor:pointer;
+  margin-top:-20px;
 }
 
 .logout{

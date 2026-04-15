@@ -34,7 +34,7 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:space-between; /* logout ke bawah */
+  justify-content:space-between; 
 }
 
 .sidebar h2{
@@ -44,7 +44,7 @@ body{
 .menu{
   flex:1;
   display:flex;
-  align-items:center; /* menu ke tengah */
+  align-items:center; 
 }
 
 .sidebar ul{
@@ -114,7 +114,7 @@ body{
 }
 
 .name-banner{
-  background-image:url("button.jpg");
+  background-image:url("button.png");
   background-size:100% 100%;
   background-repeat:no-repeat;
   width:320px;
