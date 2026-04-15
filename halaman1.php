@@ -1,4 +1,6 @@
 <?php
+$error = "";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $nomor = $_POST['nomor'];
@@ -12,11 +14,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit;
     }else{
         if($nomor != $nomorBenar){
-            header("Location: halaman2.php?error=nomor");
+            header("Location: ?error=nomor");
         }else{
-            header("Location: halaman2.php?error=kode");
+            header("Location: ?error=kode");
         }
         exit;
+    }
+}
+
+// ambil pesan error
+if(isset($_GET['error'])){
+    if($_GET['error'] == "nomor"){
+        $error = "Nomor anggota salah!";
+    }elseif($_GET['error'] == "kode"){
+        $error = "Kode salah!";
     }
 }
 ?>
@@ -29,7 +40,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <title>Digi Vote IPPNU</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -82,6 +92,15 @@ font-size:13px;
 margin-bottom:20px;
 }
 
+.error{
+background:red;
+color:white;
+padding:8px;
+border-radius:6px;
+margin-bottom:10px;
+font-size:13px;
+}
+
 .input-box{
 display:flex;
 align-items:center;
@@ -102,7 +121,6 @@ outline:none;
 background-color: transparent !important;
 width:100%;
 color:#fff;
-appearance:none;
 }
 
 .input-box input::placeholder{
@@ -143,6 +161,13 @@ background:#2c5223;
         <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
+
+        <!-- NOTIFIKASI ERROR -->
+        <?php if($error != ""): ?>
+            <div class="error">
+                <?php echo $error; ?>
+            </div>
+        <?php endif; ?>
 
         <div class="input-box">
             <i class="fa fa-user"></i>
