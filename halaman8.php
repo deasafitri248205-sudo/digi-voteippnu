@@ -227,7 +227,7 @@ body{
           <img src="visi.png" class="title-img">
 
           <div class="box">
-            <p><span>✔</span><span>Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</span></p>
+            <p><span>✔</span><span>Menjadikan IPNU sebagai organisasi pelajar yang inspiratif, berkarakter, dan peduli terhadap lingkungan sekitar.</span></p>
           </div>
         </div>
 
@@ -235,9 +235,9 @@ body{
           <img src="misi.png" class="title-img">
 
           <div class="box">
-            <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPPNU.</span></p>
-            <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi.</span></p>
-            <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar.</span></p>
+            <p><span>✔</span><span>Menciptakan program kerja yang inovatif dan bermanfaat.</span></p>
+            <p><span>✔</span><span>Membentuk karakter pelajar yang berakhlakul karimah.</span></p>
+            <p><span>✔</span><span>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</span></p>
           </div>
         </div>
 
