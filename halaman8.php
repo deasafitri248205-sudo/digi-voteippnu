@@ -26,6 +26,7 @@ body{
   height:100vh;
 }
 
+/* SIDEBAR (FIX SESUAI HALAMAN PERTAMA) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -34,17 +35,17 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:space-between; /* logout ke bawah */
 }
 
 .sidebar h2{
   text-align:center;
+  margin-bottom:250px; /* biar menu turun */
 }
 
 .menu{
   flex:1;
   display:flex;
-  align-items:center; /* menu ke tengah */
+  justify-content:center;
 }
 
 .sidebar ul{
@@ -64,10 +65,13 @@ body{
 }
 
 .logout{
+  margin-top:auto;
   margin-bottom:20px;
   font-size:18px;
+  text-align:center;
 }
 
+/* MAIN */
 .main{
   flex:1;
   padding:40px;
@@ -119,15 +123,20 @@ body{
   background-repeat:no-repeat;
   width:320px;
   height:90px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   color:white;
   font-weight:bold;
-  font-size:22px;
+  font-size:20px;
   letter-spacing:1px;
-  margin-top:-35px; 
+
+  margin-top:-55px;
   text-align:center;
+
+  padding-top:0px; /* biar pas di lengkungan */
 }
 
 .vision-mission{
@@ -193,7 +202,7 @@ body{
 
     <div class="menu">
       <ul>
-        <li>Voting</a></li>
+        <li>Voting</li>
         <li><a href="halaman11.php">Hasil Voting</a></li>
       </ul>
     </div>
@@ -235,9 +244,15 @@ body{
           <img src="misi.png" class="title-img">
 
           <div class="box">
+<<<<<<< HEAD
             <p><span>✔</span><span>Menciptakan program kerja yang inovatif dan bermanfaat.</span></p>
             <p><span>✔</span><span>Membentuk karakter pelajar yang berakhlakul karimah.</span></p>
             <p><span>✔</span><span>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</span></p>
+=======
+            <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</span></p>
+            <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</span></p>
+            <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar</span></p>
+>>>>>>> 57b7628726e9fd6d270a631ba16b5b106be9edbf
           </div>
         </div>
 
