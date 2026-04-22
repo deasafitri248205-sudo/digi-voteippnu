@@ -224,49 +224,93 @@ color:red;
 </style>
 
 </head>    
-<body>  <div class="container">    <div class="sidebar">    
-    <h2>Sistem<br>E-Voting</h2>  <ul>    
-  <li>Voting</li>    
-  <li>Hasil Voting</li>    
-</ul>    <div class="logout">Log Out →</div>    </div>    <div class="main">  <img src="logo.png" class="logo">    <h1>KANDIDAT 1</h1>    <div class="content">      <div class="candidate">    
-    <div class="photo-card">    
-      <img src="kandidat2.png">    
-    </div>    <div class="name-banner">    
-  DWI RATNA    
+<body>  
+  
+<div class="container">   
+
+  <div class="sidebar">    
+    <h2>Sistem<br>E-Voting</h2>  
+
+      <ul>    
+        <li>Voting</li>    
+        <li>Hasil Voting</li>    
+      </ul>  
+
+    <div class="logout">Log Out →</div>    
+  </div>    
+  
+  <div class="main">  
+
+    <img src="logo.png" class="logo">    
+
+    <h1>KANDIDAT 2</h1>   
+  
+    <div class="content">     
+      <div class="candidate">    
+        <div class="photo-card">    
+          <img src="kandidat2.png">    
+        </div>    
+
+      <div class="name-banner">    
+        DWI RATNA    
+      </div>
+    </div>      
+  
+    <div class="vision-mission"> 
+
+      <div class="section">    
+        <img src="visi.png" class="title-img">    
+
+        <div class="box">    
+          <p>✔ Mewujudkan IPNU sebagai wadah pelajar NU yang solid, kreatif, dan berlandaskan nilai Ahlussunnah Wal Jama’ah.</p>    
+        </div>    
+      </div>    
+
+      <div class="section">    
+        <img src="misi.png" class="title-img">    
+
+      <div class="box">    
+        <p><span>✔</span><span>Meningkatkan keaktifan anggota dalam setiap kegiatan IPPNU</span></p>
+        <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</span></p>
+        <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar</span></p> 
+      </div>    
+    </div>    
+
+    <div class="buttons">    
+      <button class="vote">VOTING</button>    
+      <button class="back">KEMBALI</button>    
+    </div>
+  </div>     
+</div>        
+</div>        
+</div>  
+          
+          
+<div class="overlay">
+
+  <div class="popup">
+
+    <p class="popup-text">
+      Yakin dengan pilihan anda?<br>
+      Setelah klik “Simpan”, pilihan<br>
+      anda tidak dapat diubah.
+    </p>
+
+    <div class="popup-buttons">
+
+      <a href="halaman9.php" class="btn-save" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✓ Simpan
+      </a>
+
+      <a href="halaman6.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✗ Batal
+      </a>
+
+    </div>
+
+  </div>
+
 </div>
 
-  </div>      <div class="vision-mission">    <div class="section">    
-  <img src="visi.png" class="title-img">    
-
-  <div class="box">    
-    <p>✔ Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</p>    
-  </div>    
-</div>    
-
-<div class="section">    
-  <img src="misi.png" class="title-img">    
-
-  <div class="box">    
-    <p>✔ Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>    
-    <p>✔ Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>    
-    <p>✔ Mengadakan kegiatan yang mendukung prestasi pelajar</p>    
-  </div>    
-</div>    
-
-<div class="buttons">    
-  <button class="vote">VOTING</button>    
-  <button class="back">KEMBALI</button>    
-</div>
-
-  </div>    </div>    </div>  </div>    
-<div class="overlay">    <div class="popup">  <p class="popup-text">    
-  Yakin dengan pilihan anda?<br>    
-  Setelah klik “Simpan”, pilihan<br>    
-  anda tidak dapat diubah.    
-</p>    <div class="popup-buttons">      <button class="btn-save">    
-    ✓ Simpan    
-  </button>      <button class="btn-cancel">    
-    ✗ Batal    
-  </button>    </div>    </div>  </div>    
 </body>    
-</html>  Ini gimnaa biar bisa di klik simpan nanti ke halaman selanjutnya dan kembali ke halaman sebelumnya
+</html> 

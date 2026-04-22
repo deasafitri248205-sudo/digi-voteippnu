@@ -242,7 +242,7 @@ body{
         </div>
 
         <div class="button.png">
-          <button class="vote" onclick="window.location.href='halaman5.php'">VOTING</button>
+          <button class="vote" onclick="window.location.href='halaman9.php'">VOTING</button>
           <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
         </div>
 

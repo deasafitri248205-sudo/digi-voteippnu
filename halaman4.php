@@ -26,6 +26,7 @@ body{
   height:100vh;
 }
 
+/* SIDEBAR (FIX SESUAI HALAMAN PERTAMA) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -34,17 +35,17 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:space-between; 
 }
 
 .sidebar h2{
   text-align:center;
+  margin-bottom:250px; /* biar menu turun */
 }
 
 .menu{
   flex:1;
   display:flex;
-  align-items:center; 
+  justify-content:center;
 }
 
 .sidebar ul{
@@ -64,10 +65,13 @@ body{
 }
 
 .logout{
+  margin-top:auto;
   margin-bottom:20px;
   font-size:18px;
+  text-align:center;
 }
 
+/* MAIN */
 .main{
   flex:1;
   padding:40px;
@@ -119,15 +123,20 @@ body{
   background-repeat:no-repeat;
   width:320px;
   height:90px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   color:white;
   font-weight:bold;
-  font-size:22px;
+  font-size:20px;
   letter-spacing:1px;
-  margin-top:-35px; 
+
+  margin-top:-55px;
   text-align:center;
+
+  padding-top:0px; /* biar pas di lengkungan */
 }
 
 .vision-mission{
@@ -193,7 +202,7 @@ body{
 
     <div class="menu">
       <ul>
-        <li>Voting</a></li>
+        <li>Voting</li>
         <li><a href="halaman11.php">Hasil Voting</a></li>
       </ul>
     </div>

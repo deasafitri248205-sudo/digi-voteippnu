@@ -25,14 +25,16 @@ body{
     height:100vh;
 }
 
+/* SIDEBAR (INI AJA YANG DIUBAH) */
 .sidebar{
     width:220px;
     background:rgba(150,185,155,0.7);
     backdrop-filter: blur(8px);
-    padding:60px 30px;
+    padding:60px 20px;
     color:white;
     display:flex;
     flex-direction:column;
+    align-items: center; /* bikin semua ke tengah */
 }
 
 .sidebar h2{
@@ -40,19 +42,19 @@ body{
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 300px;
-    text-align: left;
+    text-align: center; /* tengahin tulisan */
 }
 
 .sidebar ul{
     list-style: none;
     flex-grow: 1;
+    text-align: center; /* menu ke tengah */
 }
 
 .sidebar li{
     margin-bottom: 40px;
     font-size: 18px;
     cursor: pointer;
-    text-align: left;
 }
 
 .sidebar a{
@@ -69,8 +71,10 @@ body{
     margin-top: auto;
     font-size: 18px;
     padding-bottom: 20px;
+    text-align: center; /* logout ke tengah */
 }
 
+/* MAIN (TIDAK DIUBAH) */
 .main{
     flex: 1;
     padding: 40px;

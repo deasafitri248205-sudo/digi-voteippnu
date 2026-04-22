@@ -15,7 +15,7 @@
 }
 
 body{
-  background-image:url("background.jpg");
+  background-image:url("bg.jpeg");
   background-size:cover;
   background-position:center;
   height:100vh;
@@ -329,13 +329,39 @@ color:red;
         ✓ Simpan
       </a>
 
-      <a href="halaman4.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
+      <a href="halaman9.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
         ✗ Batal
       </a>
 
     </div>
 
   </div>
+
+<div class="overlay">
+
+  <div class="popup">
+
+    <p class="popup-text">
+      Yakin dengan pilihan anda?<br>
+      Setelah klik “Simpan”, pilihan<br>
+      anda tidak dapat diubah.
+    </p>
+
+    <div class="popup-buttons">
+
+      <a href="halaman10.php" class="btn-save" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✓ Simpan
+      </a>
+
+      <a href="halaman8.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">
+        ✗ Batal
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
 
 </div>
 </body>
