@@ -126,7 +126,7 @@ body{
   <div class="menu">
     <ul>
       <li>Voting</li>
-      <li><a href="halaman11.php">Hasil Voting</a></li>
+      <li><a href="halaman3.php">Hasil Voting</a></li>
     </ul>
   </div>
 

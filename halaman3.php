@@ -47,7 +47,8 @@ body{
 .sidebar ul{
     list-style: none;
     flex-grow: 1;
-    text-align: center; 
+    text-align: center;
+} 
 
 .sidebar li{
     margin-bottom: 40px;
@@ -165,7 +166,7 @@ body{
 
         <ul>
             <li><a>Voting</a></li>
-            <li><a href="halaman10.php">Hasil Voting</a></li>
+            <li><a href="halaman11.php">Hasil Voting</a></li>
         </ul>
 
         <div class="logout">

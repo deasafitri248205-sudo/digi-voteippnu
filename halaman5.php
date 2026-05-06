@@ -319,7 +319,7 @@ body{
     </p>
 
     <div class="popup-buttons">
-      <a href="halaman9.php" class="btn-save">✓ Simpan</a>
+      <a href="halaman10.php" class="btn-save">✓ Simpan</a>
       <a href="halaman4.php" class="btn-cancel">✗ Batal</a>
     </div>
   </div>

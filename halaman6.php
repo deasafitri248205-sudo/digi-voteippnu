@@ -134,7 +134,7 @@ body{
   margin-top:-55px;
   text-align:center;
 
-  padding-top:0px; /* biar pas di lengkungan */
+  padding-top:0px; 
 }
 
 .vision-mission{
