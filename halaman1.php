@@ -1,33 +1,28 @@
 <?php
 $error = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+$nomor_benar = "123456";
+$kode_benar  = "ippnu";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomor = $_POST['nomor'];
-    $kode = $_POST['kode'];
+    $kode  = $_POST['kode'];
 
-    $nomorBenar = "123456";
-    $kodeBenar = "ippnu";
-
-    if($nomor == $nomorBenar && $kode == $kodeBenar){
+    if ($nomor == $nomor_benar && $kode == $kode_benar) {
         header("Location: halaman3.php");
-        exit;
-    }else{
-        if($nomor != $nomorBenar){
-            header("Location: ?error=nomor");
-        }else{
-            header("Location: ?error=kode");
-        }
-        exit;
-    }
-}
+        exit();
+    } else {
+        $pesan_error = [];
 
-// ambil pesan error
-if(isset($_GET['error'])){
-    if($_GET['error'] == "nomor"){
-        $error = "Nomor anggota salah!";
-    }elseif($_GET['error'] == "kode"){
-        $error = "Kode salah!";
+        if ($nomor != $nomor_benar) {
+            $pesan_error[] = "Nomor anggota salah";
+        }
+
+        if ($kode != $kode_benar) {
+            $pesan_error[] = "Kode salah";
+        }
+
+        $error = implode(" dan ", $pesan_error);
     }
 }
 ?>
@@ -162,11 +157,8 @@ background:#2c5223;
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
 
-        <!-- NOTIFIKASI ERROR -->
         <?php if($error != ""): ?>
-            <div class="error">
-                <?php echo $error; ?>
-            </div>
+            <div class="error"><?= $error ?></div>
         <?php endif; ?>
 
         <div class="input-box">

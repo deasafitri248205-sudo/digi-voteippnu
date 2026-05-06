@@ -26,7 +26,6 @@ body{
   height:100vh;
 }
 
-/* SIDEBAR (FIX SESUAI HALAMAN PERTAMA) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -71,7 +70,6 @@ body{
   text-align:center;
 }
 
-/* MAIN */
 .main{
   flex:1;
   padding:40px;

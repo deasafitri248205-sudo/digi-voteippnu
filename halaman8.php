@@ -26,7 +26,6 @@ body{
   height:100vh;
 }
 
-/* SIDEBAR (FIX SESUAI HALAMAN PERTAMA) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -39,7 +38,7 @@ body{
 
 .sidebar h2{
   text-align:center;
-  margin-bottom:250px; /* biar menu turun */
+  margin-bottom:250px; 
 }
 
 .menu{
@@ -71,7 +70,6 @@ body{
   text-align:center;
 }
 
-/* MAIN */
 .main{
   flex:1;
   padding:40px;

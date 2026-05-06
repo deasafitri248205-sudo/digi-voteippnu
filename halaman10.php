@@ -14,14 +14,12 @@ body{
   background-position: center;
 }
 
-/* CONTAINER */
 .container{
   display:flex;
   min-height:100vh;
   position:relative;
 }
 
-/* SIDEBAR (SUDAH DISAMAKAN DENGAN HALAMAN 1) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -66,7 +64,6 @@ body{
   text-align:center;
 }
 
-/* LOGO */
 .logo{
   position:absolute;
   top:20px;
@@ -74,7 +71,6 @@ body{
   width:75px;
 }
 
-/* CONTENT */
 .content{
   flex:1;
   display:flex;
@@ -82,7 +78,6 @@ body{
   align-items:center;
 }
 
-/* CARD */
 .card{
   background:#eaeaea;
   padding:50px 60px;
@@ -92,7 +87,6 @@ body{
   box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* TEXT */
 .card p{
   font-size:22px;
   font-weight:600;
@@ -100,7 +94,6 @@ body{
   color:#2b2b2b;
 }
 
-/* BUTTON */
 .btn{
   margin-top:35px;
   padding:12px 30px;
@@ -127,7 +120,6 @@ body{
 
 <img src="logo.png" class="logo">
 
-<!-- SIDEBAR -->
 <div class="sidebar">
   <h2>Sistem<br>E-Voting</h2>
 
@@ -143,7 +135,6 @@ body{
   </div>
 </div>
 
-<!-- CONTENT -->
 <div class="content">
   <div class="card">
     <p>
