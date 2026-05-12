@@ -86,7 +86,7 @@ body{
     font-size:32px;
     font-weight:bold;
     margin-bottom:80px;
-    color:#333;
+    color:#000;
     margin-top:0;
 }
 

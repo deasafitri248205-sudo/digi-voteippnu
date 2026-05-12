@@ -324,7 +324,6 @@ body{
 
 </div>
 
-<!-- Popup -->
 <div class="overlay">
   <div class="popup">
 

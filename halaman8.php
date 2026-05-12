@@ -242,7 +242,10 @@ body{
           <img src="misi.png" class="title-img">
 
           <div class="box">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a96b7f6eb31290bcb0502cd2c9facc681bdb197
             <p><span>✔</span><span>Menciptakan program kerja yang inovatif dan bermanfaat.</span></p>
             <p><span>✔</span><span>Membentuk karakter pelajar yang berakhlakul karimah.</span></p>
             <p><span>✔</span><span>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</span></p>

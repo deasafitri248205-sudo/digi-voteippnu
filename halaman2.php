@@ -122,7 +122,11 @@ body{
 
     <div class="card">
 
+<<<<<<< HEAD
+        <img src="ICON-removebg-preview.png" class="illustration">
+=======
         <img src="orang.png" class="illustration" alt="Ilustrasi">
+>>>>>>> bff2a46b4994f803278c97f8c5026d11258e9455
 
         <h2>LOGIN GAGAL!</h2>
 
