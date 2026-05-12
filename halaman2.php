@@ -105,7 +105,7 @@ display:inline-block;
 
     <div class="card">
 
-        <img src="orang.jpg" class="illustration">
+        <img src="ICON-removebg-preview.png" class="illustration">
 
         <h2>LOGIN GAGAL!</h2>
 
