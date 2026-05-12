@@ -245,6 +245,7 @@ body{
 
           <div class="box">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p><span>✔</span><span>Menciptakan program kerja yang inovatif dan bermanfaat.</span></p>
             <p><span>✔</span><span>Membentuk karakter pelajar yang berakhlakul karimah.</span></p>
             <p><span>✔</span><span>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</span></p>
@@ -253,6 +254,11 @@ body{
             <p><span>✔</span><span>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</span></p>
             <p><span>✔</span><span>Mengadakan kegiatan yang mendukung prestasi pelajar</span></p>
 >>>>>>> 57b7628726e9fd6d270a631ba16b5b106be9edbf
+=======
+            <p><span>✔</span><span>Menciptakan program kerja yang inovatif dan bermanfaat.</span></p>
+            <p><span>✔</span><span>Membentuk karakter pelajar yang berakhlakul karimah.</span></p>
+            <p><span>✔</span><span>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</span></p>
+>>>>>>> da02e95e400738f14138f25994103adbeaaa9c82
           </div>
         </div>
 
