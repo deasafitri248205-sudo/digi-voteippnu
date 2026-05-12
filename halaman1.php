@@ -1,28 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $anggotaBenar = "123456";
-    $kodeBenar = "ippnu";
-
-    $anggota = $_POST['anggota'];
-    $kode = $_POST['kode'];
-
-    if ($anggota != $anggotaBenar && $kode != $kodeBenar) {
-        header("Location: halaman2.php?error=keduanya");
-        exit;
-    } elseif ($anggota != $anggotaBenar) {
-        header("Location: halaman2.php?error=anggota");
-        exit;
-    } elseif ($kode != $kodeBenar) {
-        header("Location: halaman2.php?error=kode");
-        exit;
-    } else {
-        header("Location: halaman3.php");
-        exit;
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
