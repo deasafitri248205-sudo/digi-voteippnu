@@ -291,9 +291,9 @@ body{
         <div class="section">
           <img src="misi.png" class="title-img">
           <div class="box">
-            <p>Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>
-            <p>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>
-            <p>Mengadakan kegiatan yang mendukung prestasi pelajar</p>
+            <p>Menciptakan program kerja yang inovatif dan bermanfaat.</p>
+            <p>Membentuk karakter pelajar yang berakhlakul karimah.</p>
+            <p>Meningkatkan kepedulian sosial melalui kegiatan kemasyarakatan.</p>
           </div>
         </div>
 
