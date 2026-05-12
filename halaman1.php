@@ -123,11 +123,6 @@ body{
     color:#4d6b53;
 }
 
-.toggle-password{
-    cursor:pointer;
-    margin-left:10px;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -135,16 +130,6 @@ input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #9bbf9c inset !important;
     -webkit-text-fill-color: #1e3d27 !important;
     border:none !important;
-}
-
-input[type="password"]::-ms-reveal,
-input[type="password"]::-ms-clear{
-    display:none;
-}
-
-input[type="password"]::-webkit-credentials-auto-fill-button,
-input[type="password"]::-webkit-textfield-decoration-container{
-    display:none !important;
 }
 
 .btn{
@@ -202,8 +187,7 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
             <div class="input-box">
                 <i class="fa fa-lock"></i>
-                <input type="password" name="kode" id="kode" placeholder="Masukkan Kode" required>
-                <i class="fa fa-eye-slash toggle-password" id="togglePassword"></i>
+                <input type="password" name="kode" placeholder="Masukkan Kode" required>
             </div>
 
             <button class="btn" type="submit">MASUK</button>
@@ -212,23 +196,6 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
     </div>
 </div>
-
-<script>
-const passwordInput = document.getElementById("kode");
-const togglePassword = document.getElementById("togglePassword");
-
-togglePassword.addEventListener("click", function () {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        this.classList.remove("fa-eye-slash");
-        this.classList.add("fa-eye");
-    } else {
-        passwordInput.type = "password";
-        this.classList.remove("fa-eye");
-        this.classList.add("fa-eye-slash");
-    }
-});
-</script>
 
 </body>
 </html>
