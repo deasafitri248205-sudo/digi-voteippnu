@@ -59,41 +59,54 @@ body{
 
 .login-card{
     background:#f5f5f5;
-    padding:40px;
-    width:350px;
-    border-radius:15px;
+    padding:50px;
+    width:450px;
+    border-radius:20px;
     text-align:center;
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 .logo{
-    width:80px;
-    margin-bottom:10px;
+    width:90px;
+    margin-bottom:15px;
 }
 
 .login-card h2{
     color:#2f6f3e;
-    font-size:20px;
-    margin-bottom:8px;
+    font-size:24px;
+    margin-bottom:10px;
 }
 
 .login-card p{
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.error{
+    background:red;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:15px;
     font-size:13px;
-    margin-bottom:20px;
 }
 
 .input-box{
     display:flex;
     align-items:center;
     background:#9bbf9c;
-    padding:10px;
+    padding:12px;
     border-radius:8px;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .input-box i{
-    margin-right:10px;
     color:#1e3d27;
+    font-size:18px;
+}
+
+.input-box i:first-child{
+    margin-right:10px;
 }
 
 .input-box input{
@@ -102,12 +115,17 @@ body{
     background:none;
     width:100%;
     color:#1e3d27;
-    font-size:16px;
+    font-size:17px;
     box-shadow:none;
 }
 
 .input-box input::placeholder{
     color:#4d6b53;
+}
+
+.toggle-password{
+    cursor:pointer;
+    margin-left:10px;
 }
 
 input:-webkit-autofill,
@@ -131,11 +149,12 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
 .btn{
     width:100%;
-    padding:12px;
+    padding:14px;
     border:none;
     background:#3d6e2f;
     color:white;
     font-weight:bold;
+    font-size:16px;
     border-radius:8px;
     cursor:pointer;
 }
@@ -156,6 +175,24 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
 
+        <?php
+        if (isset($_GET['error'])) {
+            $pesan = "";
+
+            if ($_GET['error'] == "anggota") {
+                $pesan = "Nomor anggota salah";
+            } elseif ($_GET['error'] == "kode") {
+                $pesan = "Kode salah";
+            } elseif ($_GET['error'] == "keduanya") {
+                $pesan = "Nomor anggota dan kode salah";
+            }
+
+            if ($pesan != "") {
+                echo '<div class="error">' . $pesan . '</div>';
+            }
+        }
+        ?>
+
         <form method="POST">
 
             <div class="input-box">
@@ -165,8 +202,8 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
             <div class="input-box">
                 <i class="fa fa-lock"></i>
-                <input type="password" name="kode" placeholder="Masukkan Kode" required>
-                <i class="fa fa-eye-slash"></i>
+                <input type="password" name="kode" id="kode" placeholder="Masukkan Kode" required>
+                <i class="fa fa-eye-slash toggle-password" id="togglePassword"></i>
             </div>
 
             <button class="btn" type="submit">MASUK</button>
@@ -175,6 +212,23 @@ input[type="password"]::-webkit-textfield-decoration-container{
 
     </div>
 </div>
+
+<script>
+const passwordInput = document.getElementById("kode");
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        this.classList.remove("fa-eye-slash");
+        this.classList.add("fa-eye");
+    } else {
+        passwordInput.type = "password";
+        this.classList.remove("fa-eye");
+        this.classList.add("fa-eye-slash");
+    }
+});
+</script>
 
 </body>
 </html>

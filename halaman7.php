@@ -310,7 +310,6 @@ body{
 
 </div>
 
-<!-- POPUP -->
 <div class="overlay">
   <div class="popup">
     <p class="popup-text">

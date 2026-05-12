@@ -9,7 +9,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -25,134 +25,130 @@ body{
     height:100vh;
 }
 
+/* Sidebar sama persis seperti halaman detail kandidat */
 .sidebar{
     width:220px;
-    background:rgba(150,185,155,0.7);
-    backdrop-filter: blur(8px);
-    padding:60px 20px;
+    background:rgba(150,190,160,0.8);
+    padding:40px 20px;
     color:white;
     display:flex;
     flex-direction:column;
-    align-items: center; 
+    align-items:center;
 }
 
 .sidebar h2{
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 300px;
-    text-align: center; 
+    text-align:center;
+    margin-bottom:250px;
+    font-size:24px;
+    font-weight:bold;
+    line-height:1.2;
 }
 
 .sidebar ul{
-    list-style: none;
-    flex-grow: 1;
-    text-align: center;
-} 
+    list-style:none;
+    text-align:center;
+    padding:0;
+    flex:1;
+}
 
 .sidebar li{
-    margin-bottom: 40px;
-    font-size: 18px;
-    cursor: pointer;
+    margin:25px 0;
+    font-size:20px;
 }
 
 .sidebar a{
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    opacity: 0.7;
+    text-decoration:none;
+    color:white;
 }
 
 .logout{
-    margin-top: auto;
-    font-size: 18px;
-    padding-bottom: 20px;
-    text-align: center; 
+    margin-top:auto;
+    margin-bottom:20px;
+    font-size:18px;
+    text-align:center;
 }
 
+/* Main */
 .main{
-    flex: 1;
-    padding: 40px;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex:1;
+    padding:40px;
+    position:relative;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .logo{
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    width: 80px;
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:70px;
 }
 
 .main h1{
-    font-size: 32px;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    letter-spacing: 3px;
-    color: #333;
-    font-weight: bold;
+    font-size:32px;
+    font-weight:bold;
+    color:#000;
+    margin-top:0;
+    margin-bottom:40px;
+    letter-spacing:normal;
 }
 
 .card-container{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 35px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:35px;
 }
 
 .card{
-    background: #f9f9f9;
-    padding: 30px 20px;
-    width: 240px; 
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.3s;
+    background:#f9f9f9;
+    padding:30px 20px;
+    width:240px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition:0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.card:hover{
+    transform:translateY(-10px);
 }
 
 .card h2{
-    font-size: 18px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    color: #333;
+    font-size:18px;
+    margin-bottom:20px;
+    letter-spacing:1px;
+    color:#333;
 }
 
 .card img{
-    width: 150px; 
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 25px;
+    width:150px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:25px;
 }
 
 .btn{
-    display: block;
-    background: #2e7d32;
-    color: white;
-    padding: 12px 0;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    width: 100%; 
-    text-align: center;
-    transition: 0.3s;
+    display:block;
+    background:#2e7d32;
+    color:white;
+    padding:12px 0;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    width:100%;
+    text-align:center;
+    transition:0.3s;
 }
 
 .btn:hover{
-    background: #1b5e20;
+    background:#1b5e20;
 }
 </style>
 </head>
@@ -176,7 +172,7 @@ body{
 
     <div class="main">
 
-        <img src="logo.png" class="logo">
+        <img src="logo.png" class="logo" alt="Logo">
 
         <h1>DAFTAR KANDIDAT</h1>
 
@@ -184,19 +180,19 @@ body{
 
             <div class="card">
                 <h2>KANDIDAT 1</h2>
-                <img src="kandidat1.png">
+                <img src="kandidat1.png" alt="Kandidat 1">
                 <a href="halaman4.php" class="btn">DETAIL</a>
             </div>
 
             <div class="card">
                 <h2>KANDIDAT 2</h2>
-                <img src="kandidat2.png">
+                <img src="kandidat2.png" alt="Kandidat 2">
                 <a href="halaman6.php" class="btn">DETAIL</a>
             </div>
 
             <div class="card">
                 <h2>KANDIDAT 3</h2>
-                <img src="kandidat3.png">
+                <img src="kandidat3.png" alt="Kandidat 3">
                 <a href="halaman8.php" class="btn">DETAIL</a>
             </div>
 

@@ -219,7 +219,6 @@ body{
   gap:60px;
 }
 
-/* tombol popup */
 .btn-save,
 .btn-cancel{
   background:#d9d9d9;
@@ -320,7 +319,7 @@ body{
     </p>
 
     <div class="popup-buttons">
-      <a href="halaman9.php" class="btn-save">✓ Simpan</a>
+      <a href="halaman10.php" class="btn-save">✓ Simpan</a>
       <a href="halaman8.php" class="btn-cancel">✗ Batal</a>
     </div>
   </div>

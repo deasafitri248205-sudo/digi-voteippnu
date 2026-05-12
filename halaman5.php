@@ -38,6 +38,9 @@ body{
 .sidebar h2{
   text-align:center;
   margin-bottom:250px;
+  font-size:24px;
+  font-weight:bold;
+  line-height:1.2;
 }
 
 .menu{
@@ -83,6 +86,7 @@ body{
 .main h1{
   text-align:center;
   margin-bottom:40px;
+  font-size:32px;
 }
 
 .content{
@@ -118,15 +122,12 @@ body{
   background-repeat:no-repeat;
   width:320px;
   height:90px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   color:white;
   font-weight:bold;
   font-size:20px;
-
   margin-top:-55px;
   text-align:center;
 }
@@ -196,13 +197,15 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  z-index:9999;
 }
 
 .popup{
+  position:absolute; 
   background:#eee;
-  padding:50px 60px;
-  border-radius:20px;
   width:600px;
+  padding:40px 50px;
+  border-radius:20px;
   text-align:center;
   box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
@@ -211,6 +214,8 @@ body{
   font-size:28px;
   line-height:1.4;
   margin-bottom:40px;
+  color:#000;
+  font-weight:normal;
 }
 
 .popup-buttons{
@@ -226,10 +231,13 @@ body{
   padding:15px 40px;
   border-radius:12px;
   font-size:22px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
   cursor:pointer;
   text-decoration:none;
   display:inline-block;
   text-align:center;
+  min-width:170px;
 }
 
 .btn-save{
@@ -263,7 +271,7 @@ body{
 
   <div class="main">
 
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="Logo">
 
     <h1>KANDIDAT 1</h1>
 
@@ -271,7 +279,7 @@ body{
 
       <div class="candidate">
         <div class="photo-card">
-          <img src="kandidat1.png" class="candidate-img">
+          <img src="kandidat1.png" class="candidate-img" alt="Kandidat 1">
         </div>
 
         <div class="name-banner">
@@ -282,14 +290,16 @@ body{
       <div class="vision-mission">
 
         <div class="section">
-          <img src="visi.png" class="title-img">
+          <img src="visi.png" class="title-img" alt="Visi">
+
           <div class="box">
             <p>Terwujudnya IPNU yang aktif, berakhlak, dan berprestasi dalam organisasi maupun akademik.</p>
           </div>
         </div>
 
         <div class="section">
-          <img src="misi.png" class="title-img">
+          <img src="misi.png" class="title-img" alt="Misi">
+
           <div class="box">
             <p>Meningkatkan keaktifan anggota dalam setiap kegiatan IPNU</p>
             <p>Menumbuhkan sikap disiplin dan tanggung jawab dalam berorganisasi</p>
@@ -299,7 +309,11 @@ body{
 
         <div class="buttons">
           <button class="vote">VOTING</button>
-          <button class="back" onclick="window.location.href='halaman3.php'">KEMBALI</button>
+
+          <button class="back"
+                  onclick="window.location.href='halaman3.php'">
+            KEMBALI
+          </button>
         </div>
 
       </div>
@@ -310,18 +324,28 @@ body{
 
 </div>
 
+<!-- Popup -->
 <div class="overlay">
   <div class="popup">
+
     <p class="popup-text">
       Yakin dengan pilihan anda?<br>
-      Setelah klik “Simpan”, pilihan<br>
+      Setelah klik "Simpan", pilihan<br>
       anda tidak dapat diubah.
     </p>
 
     <div class="popup-buttons">
-      <a href="halaman10.php" class="btn-save">✓ Simpan</a>
-      <a href="halaman4.php" class="btn-cancel">✗ Batal</a>
+
+      <a href="halaman10.php" class="btn-save">
+        ✓ Simpan
+      </a>
+
+      <a href="halaman4.php" class="btn-cancel">
+        ✗ Batal
+      </a>
+
     </div>
+
   </div>
 </div>
 

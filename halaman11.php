@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hasil Voting</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -28,12 +26,10 @@ body{
     height:100vh;
 }
 
-/* SIDEBAR */
 .sidebar{
     width:220px;
-    background:rgba(150,185,155,0.7);
-    backdrop-filter:blur(8px);
-    padding:60px 20px;
+    background:rgba(150,190,160,0.8);
+    padding:40px 20px;
     color:white;
     display:flex;
     flex-direction:column;
@@ -41,22 +37,23 @@ body{
 }
 
 .sidebar h2{
-    font-size:22px;
-    font-weight:500;
-    line-height:1.2;
-    margin-bottom:300px;
     text-align:center;
+    margin-bottom:250px;
+    font-size:24px;
+    font-weight:bold;
+    line-height:1.2;
 }
 
 .sidebar ul{
     list-style:none;
-    flex-grow:1;
+    flex:1;
     text-align:center;
+    padding:0;
 }
 
 .sidebar li{
-    margin-bottom:40px;
-    font-size:18px;
+    margin:25px 0;
+    font-size:20px;
 }
 
 .sidebar a{
@@ -66,12 +63,11 @@ body{
 
 .logout{
     margin-top:auto;
+    margin-bottom:20px;
     font-size:18px;
-    padding-bottom:20px;
     text-align:center;
 }
 
-/* CONTENT */
 .main{
     flex:1;
     padding:40px;
@@ -81,21 +77,19 @@ body{
 
 .logo{
     position:absolute;
-    top:30px;
-    right:40px;
-    width:80px;
+    top:20px;
+    right:20px;
+    width:70px;
 }
 
 .main h1{
     font-size:32px;
-    margin-top:30px;
-    margin-bottom:80px;
-    letter-spacing:3px;
-    color:#333;
     font-weight:bold;
+    margin-bottom:80px;
+    color:#333;
+    margin-top:0;
 }
 
-/* CARD HASIL */
 .card-container{
     display:flex;
     justify-content:center;
@@ -159,7 +153,7 @@ body{
 
         <ul>
             <li><a href="halaman3.php">Voting</a></li>
-            <li><a href="halaman10.php">Hasil Voting</a></li>
+            <li><a href="halaman11.php">Hasil Voting</a></li>
         </ul>
 
         <div class="logout">
@@ -169,7 +163,7 @@ body{
 
     <div class="main">
 
-        <img src="logo.png" class="logo">
+        <img src="logo.png" class="logo" alt="Logo">
 
         <h1>HASIL VOTING</h1>
 
@@ -177,22 +171,22 @@ body{
 
             <div class="card">
                 <h3>KANDIDAT 1</h3>
-                <img src="kandidat1.png">
-                <div class="nama">PUTRIAYU</div>
+                <img src="kandidat1.png" alt="Kandidat 1">
+                <div class="nama">PUTRI AYU</div>
                 <div class="vote">0%</div>
             </div>
 
             <div class="card">
                 <h3>KANDIDAT 2</h3>
-                <img src="kandidat2.png">
-                <div class="nama">DWIRATNA</div>
+                <img src="kandidat2.png" alt="Kandidat 2">
+                <div class="nama">DWI RATNA</div>
                 <div class="vote">0%</div>
             </div>
 
             <div class="card">
                 <h3>KANDIDAT 3</h3>
-                <img src="kandidat3.png">
-                <div class="nama">NIARASARI</div>
+                <img src="kandidat3.png" alt="Kandidat 3">
+                <div class="nama">NIA RASARI</div>
                 <div class="vote">0%</div>
             </div>
 

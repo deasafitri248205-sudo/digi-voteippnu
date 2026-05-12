@@ -38,7 +38,7 @@ body{
 
 .sidebar h2{
   text-align:center;
-  margin-bottom:250px; /* biar menu turun */
+  margin-bottom:250px; 
 }
 
 .menu{
@@ -134,7 +134,7 @@ body{
   margin-top:-55px;
   text-align:center;
 
-  padding-top:0px; /* biar pas di lengkungan */
+  padding-top:0px;
 }
 
 .vision-mission{

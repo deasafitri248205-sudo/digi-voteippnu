@@ -38,7 +38,7 @@ body{
 
 .sidebar h2{
   text-align:center;
-  margin-bottom:250px; /* biar menu turun */
+  margin-bottom:250px; 
 }
 
 .menu{

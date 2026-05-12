@@ -44,7 +44,7 @@ body{
     position:absolute;
     top:20px;
     left:20px;
-    width:60px;
+    width:80px; 
 }
 
 .container{
@@ -64,8 +64,8 @@ body{
 }
 
 .illustration{
-    width:150px;
-    margin-bottom:15px;
+    width:250px; 
+    margin-bottom:20px;
 }
 
 .card h2{
@@ -97,8 +97,19 @@ body{
     width:15px;
     height:15px;
     border:2px solid white;
+    border-top-color: transparent;
     border-radius:50%;
     display:inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 </style>
 </head>
