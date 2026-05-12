@@ -1,24 +1,17 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+$error = $_GET['error'] ?? '';
 
-    $nomor = $_POST['nomor'];
-    $kode = $_POST['kode'];
-
-    // contoh data benar
-    $nomorBenar = "123456";
-    $kodeBenar = "ippnu";
-
-    if($nomor == $nomorBenar && $kode == $kodeBenar){
-        header("Location: halaman3.php");
-        exit;
-    }else{
-        if($nomor != $nomorBenar){
-            header("Location: halaman2.php?error=nomor");
-        }else{
-            header("Location: halaman2.php?error=kode");
-        }
-        exit;
-    }
+if ($error == "anggota") {
+    $pesan = "Nomor anggota salah";
+}
+elseif ($error == "kode") {
+    $pesan = "Kode salah";
+}
+elseif ($error == "keduanya") {
+    $pesan = "Nomor anggota dan kode salah";
+}
+else {
+    $pesan = "Terjadi kesalahan login";
 }
 ?>
 
@@ -27,130 +20,122 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digi Vote IPPNU</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Login Gagal</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-height:100vh;
-background-image:url("bg.jpeg");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.container{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.login-card{
-background:#f5f5f5;
-padding:40px;
-width:350px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    height:100vh;
+    background-image:url("bg.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .logo{
-width:80px;
-margin-bottom:10px;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:80px; 
 }
 
-.login-card h2{
-color:#2f6f3e;
-font-size:20px;
-margin-bottom:8px;
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 }
 
-.login-card p{
-font-size:13px;
-margin-bottom:20px;
+.card{
+    background:#f2f2f2;
+    width:420px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-.input-box{
-display:flex;
-align-items:center;
-background:#9bbf9c;
-padding:10px;
-border-radius:8px;
-margin-bottom:15px;
+.illustration{
+    width:250px; 
+    margin-bottom:20px;
 }
 
-.input-box i{
-margin-right:10px;
-color:#1e3d27;
+.card h2{
+    color:#2e6b2e;
+    margin-bottom:5px;
 }
 
-.input-box input{
-border:none;
-outline:none;
-background:transparent;
-width:100%;
-color:#fff;
+.card p{
+    color:#2e6b2e;
+    margin-bottom:25px;
+    font-size:18px;
 }
 
 .btn{
-width:100%;
-padding:12px;
-border:none;
-background:#3d6e2f;
-color:white;
-font-weight:bold;
-border-radius:8px;
-cursor:pointer;
+    background:#2f6f1f;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
 }
 
-.btn:hover{
-background:#2c5223;
+.circle{
+    width:15px;
+    height:15px;
+    border:2px solid white;
+    border-top-color: transparent;
+    border-radius:50%;
+    display:inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 </style>
 </head>
 
 <body>
 
-<form method="POST" action="">
+<img src="logo.png" class="logo" alt="Logo">
+
 <div class="container">
 
-    <div class="login-card">
+    <div class="card">
 
-        <img src="logo.png" class="logo">
+        <img src="orang.png" class="illustration" alt="Ilustrasi">
 
-        <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
+        <h2>LOGIN GAGAL!</h2>
 
-        <p>Silahkan masuk untuk memberikan hak suara</p>
+        <p><?php echo $pesan; ?></p>
 
-        <div class="input-box">
-            <i class="fa fa-user"></i>
-            <input type="text" name="nomor" placeholder="Masukkan Nomor Anggota" required>
-        </div>
-
-        <div class="input-box">
-            <i class="fa fa-lock"></i>
-            <input type="password" name="kode" placeholder="Masukkan Kode" required>
-        </div>
-
-        <button type="submit" class="btn">MASUK</button>
+        <a href="halaman1.php" class="btn">
+            COBA LAGI
+            <span class="circle"></span>
+        </a>
 
     </div>
 
 </div>
-</form>
 
 </body>
 </html>

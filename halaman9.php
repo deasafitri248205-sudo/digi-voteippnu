@@ -25,7 +25,6 @@ body{
   height:100vh;
 }
 
-/* SIDEBAR */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -68,7 +67,6 @@ body{
   font-size:18px;
 }
 
-/* MAIN */
 .main{
   flex:1;
   padding:40px;
@@ -153,7 +151,6 @@ body{
   box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* ✅ FIX CENTANG */
 .box p{
   position:relative;
   padding-left:25px;
@@ -169,7 +166,6 @@ body{
   top:0;
 }
 
-/* tombol bawah */
 .buttons{
   margin-top:20px;
   display:flex;
@@ -190,7 +186,6 @@ body{
   background:#1b5e20;
 }
 
-/* POPUP */
 .overlay{
   position:fixed;
   top:0;
@@ -224,7 +219,6 @@ body{
   gap:60px;
 }
 
-/* tombol popup */
 .btn-save,
 .btn-cancel{
   background:#d9d9d9;
@@ -316,7 +310,6 @@ body{
 
 </div>
 
-<!-- POPUP -->
 <div class="overlay">
   <div class="popup">
     <p class="popup-text">
@@ -326,7 +319,7 @@ body{
     </p>
 
     <div class="popup-buttons">
-      <a href="halaman9.php" class="btn-save">✓ Simpan</a>
+      <a href="halaman10.php" class="btn-save">✓ Simpan</a>
       <a href="halaman8.php" class="btn-cancel">✗ Batal</a>
     </div>
   </div>

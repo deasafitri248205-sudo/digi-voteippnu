@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detail Kandidat</title>
+<title>Voting Berhasil</title>
 
 <style>
-body{
+*{
   margin:0;
-  font-family:"Times New Roman", serif;
-  background-image:url("bg.jpeg");
-  background-size: cover;
-  background-position: center;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* CONTAINER */
+body{
+  background-image:url("bg.jpeg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+}
+
 .container{
   display:flex;
-  min-height:100vh;
-  position:relative;
+  height:100vh;
 }
 
-/* SIDEBAR (SUDAH DISAMAKAN DENGAN HALAMAN 1) */
 .sidebar{
   width:220px;
   background:rgba(150,190,160,0.8);
@@ -35,6 +38,9 @@ body{
 .sidebar h2{
   text-align:center;
   margin-bottom:250px;
+  font-size:24px;
+  font-weight:bold;
+  line-height:1.2;
 }
 
 .menu{
@@ -66,33 +72,31 @@ body{
   text-align:center;
 }
 
-/* LOGO */
-.logo{
-  position:absolute;
-  top:20px;
-  right:30px;
-  width:75px;
-}
-
-/* CONTENT */
-.content{
+.main{
   flex:1;
+  padding:40px;
+  position:relative;
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
-/* CARD */
-.card{
-  background:#eaeaea;
-  padding:50px 60px;
-  width:520px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+.logo{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:70px;
 }
 
-/* TEXT */
+.card{
+  background:#eaeaea;
+  width:520px;
+  padding:50px 60px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
 .card p{
   font-size:22px;
   font-weight:600;
@@ -100,9 +104,9 @@ body{
   color:#2b2b2b;
 }
 
-/* BUTTON */
 .btn{
   margin-top:35px;
+  display:inline-block;
   padding:12px 30px;
   border:none;
   border-radius:10px;
@@ -112,6 +116,7 @@ body{
   letter-spacing:1px;
   cursor:pointer;
   color:#333;
+  text-decoration:none;
   transition:0.2s;
 }
 
@@ -125,38 +130,38 @@ body{
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+  <div class="sidebar">
+    <h2>Sistem<br>E-Voting</h2>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <h2>Sistem<br>E-Voting</h2>
+    <div class="menu">
+      <ul>
+        <li><a href="halaman3.php">Voting</a></li>
+        <li><a href="halaman11.php">Hasil Voting</a></li>
+      </ul>
+    </div>
 
-  <div class="menu">
-    <ul>
-      <li>Voting</li>
-      <li><a href="halaman11.php">Hasil Voting</a></li>
-    </ul>
+    <div class="logout">
+      <a href="halaman1.php">Log Out →</a>
+    </div>
   </div>
 
-  <div class="logout">
-    <a href="halaman1.php">Log Out →</a>
-  </div>
-</div>
+  <div class="main">
 
-<!-- CONTENT -->
-<div class="content">
-  <div class="card">
-    <p>
-      Pilihan anda sudah kami simpan,<br>
-      Terima kasih sudah berpartisipasi<br>
-      dalam voting ini.
-    </p>
+    <img src="logo.png" class="logo" alt="Logo">
 
-    <a href="halaman1.php">
-      <button class="btn">KEMBALI KE HALAMAN LOGIN</button>
-    </a>
+    <div class="card">
+      <p>
+        Pilihan anda sudah kami simpan,<br>
+        Terima kasih sudah berpartisipasi<br>
+        dalam voting ini.
+      </p>
+
+      <a href="halaman1.php" class="btn">
+        KEMBALI KE HALAMAN LOGIN
+      </a>
+    </div>
+
   </div>
-</div>
 
 </div>
 
