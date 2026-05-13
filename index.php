@@ -1,49 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-  <style>
-    * {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
-</head>
-<title>Register</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digi Vote IPPNU</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background-image:url("bg.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+    background:#f5f5f5;
+    padding:50px;
+    width:450px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.logo{
+    width:90px;
+    margin-bottom:15px;
+}
+
+.login-card h2{
+    color:#2f6f3e;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.login-card p{
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.error{
+    background:red;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:15px;
+    font-size:13px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    background:#9bbf9c;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:18px;
+}
+
+.input-box i{
+    color:#1e3d27;
+    font-size:18px;
+}
+
+.input-box i:first-child{
+    margin-right:10px;
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    background:none;
+    width:100%;
+    color:#1e3d27;
+    font-size:17px;
+    box-shadow:none;
+}
+
+.input-box input::placeholder{
+    color:#4d6b53;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #9bbf9c inset !important;
+    -webkit-text-fill-color: #1e3d27 !important;
+    border:none !important;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#3d6e2f;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#2c5223;
+}
+</style>
+</head>
 <body>
-  <div class="max-w-[490px] mx-auto mt-[100px] px-6">
-    <!-- // top section -->
-    <div class="flex flex-col">
-      <span class="self-center p-2 px-3 rounded mx-auto bg-[#F2EBFD]"><i class="hgi hgi-stroke hgi-task-edit-01"></i></span>
-      <h1 class="text-center fs-4xl text-[32px] font-bold">Welcome Back</h1>
-      <p class="text-center max-w-[300px] mx-auto">Please sign in to continue managing your notes and ideas.</p>
+
+<div class="container">
+    <div class="login-card">
+
+        <img src="logo.png" class="logo" alt="Logo IPPNU">
+
+        <h2>DIGI-VOTE KETUA IPPNU<br>DESA TEGAL SARI</h2>
+
+        <p>Silahkan masuk untuk memberikan hak suara</p>
+
+        <form method="POST">
+
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" name="anggota" placeholder="Masukkan Nomor Anggota" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="kode" placeholder="Masukkan Kode" required>
+            </div>
+
+            <button class="btn" type="submit">MASUK</button>
+
     </div>
-
-    <!-- // form section -->
-    <form action="/aksi-login.php" method="post" class="flex flex-col gap-4 mt-6">
-        <div class="flex flex-col gap-2">
-          <label for="users">Users</label>
-          <input type="users" name="inputan_users" id="users" class="p-2 bg-[#f8fafc] rounded border border-[#9DABBE]" placeholder="Enter your email">
-        </div>
-        <div class="flex flex-col gap-2">
-          <label for="password">Password</label>
-          <input type="password" name="inputan_password" id="password" class="p-2 bg-[#f8fafc] rounded border border-[#9DABBE]" placeholder="Enter your password">
-        </div>
-
-        <a href="" class="self-end text-[#7C3AED]">Forgot password?</a>
-
-        <button type="submit" class="bg-[#7C3AED] text-white font-bold p-2 mt-4 hover:bg-[#6b21a8] transition shadow-lg rounded">Sign In</button>
-      </form>
-
-      <!-- // bottom section -->
-      <p class="text-center mt-6">Don't have an account? <a href="./register.php" class="text-[#7C3AED] font-bold">Register</a></p>
-  </div>
+</div>
 
 </body>
-
 </html>
