@@ -141,7 +141,7 @@ body{
     </div>
 
     <div class="logout">
-      <a href="halaman1.php">Log Out →</a>
+      <a href="index.php">Log Out →</a>
     </div>
   </div>
 
@@ -156,7 +156,7 @@ body{
         dalam voting ini.
       </p>
 
-      <a href="halaman1.php" class="btn">
+      <a href="index.php" class="btn">
         KEMBALI KE HALAMAN LOGIN
       </a>
     </div>

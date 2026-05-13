@@ -135,7 +135,7 @@ input:-webkit-autofill:active{
 
         <p>Silahkan masuk untuk memberikan hak suara</p>
 
-        <form method="POST">
+        <form method="POST" action = "aksi-login.php">
 
             <div class="input-box">
                 <i class="fa fa-user"></i>

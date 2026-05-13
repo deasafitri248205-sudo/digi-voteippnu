@@ -3,7 +3,7 @@
 // memanggil koneksi di config.php 
 include "./config.php";
 
-// echo $_POST['nisn'];
+// echo $_POST['anggota'];
 // echo "<br />";
 // echo $_POST['kode'];
 
@@ -18,7 +18,7 @@ include "./config.php";
 // include "./config.php";
 
 // query untuk mengambil data dari user dengan NISN = $_POST['input_NISN']
-$query = "SELECT * FROM users WHERE username='".$_POST['kode']."'";
+$query = "SELECT * FROM users WHERE username='".$_POST['anggota']."'";
 
 // exit();
 // menjalankan query dengan koneksi dari $conn
@@ -31,13 +31,13 @@ $result = $conn->query($query);
 // echo $result->num_rows;
 // echo "<br /> <br />";
 
-// exit();
+// // exit();
 // cek jumlah data menggunakan $result
 
 // memanggil data dengan $result
 $row = $result->fetch_assoc();
 
-// exit();
+// // exit();
 
 if ($result->num_rows == 0) {
   // jika num_rows = 0 berarti tidak ada data yang ditemukan dari database 

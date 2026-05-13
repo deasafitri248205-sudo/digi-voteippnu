@@ -157,7 +157,7 @@ body{
         </ul>
 
         <div class="logout">
-            <a href="halaman1.php">Log Out →</a>
+            <a href="index.php">Log Out →</a>
         </div>
     </div>
 
